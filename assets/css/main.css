@@ -27,3 +27,87 @@ nav a {
 nav a:hover {
     background-color: #7fd186;
 }
+
+.main_banner {
+    width: 100%; /* Make the banner full width */
+    height: 300px; /* Set a height for the banner */
+    overflow: hidden; /* Hide overflow if the image is too big */
+}
+
+.banner-image {
+    width: 100%; /* Make the image cover the full width */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+}
+
+.banner_aside {
+    padding: 20px; /* Add some padding around the text */
+    background-color: #f9f9f9; /* Light background color */
+    border-top: 2px solid #ccc; /* Optional border for separation */
+}
+
+.aside_content {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out the text and logo */
+    align-items: center; /* Center content vertically */
+}
+
+.text-content {
+    flex: 1; /* Allow text content to take up available space */
+}
+
+.logo-image {
+    width: 300px; /* Set a width for the logo */
+    height: 300px; /* Maintain aspect ratio */
+    margin: 50px;
+}
+
+.banner_aside h2 {
+    font-size: 24px; /* Adjust the font size for the title */
+    margin-bottom: 10px; /* Space between title and text */
+}
+
+.banner_aside p {
+    font-size: 16px; /* Adjust the font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+.bottom-section {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center content vertically */
+    background-color: #343435; /* Light gray background color */
+    height: 200px; /* Set height */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+}
+
+.info-logo {
+    width: 550px; /* Set a width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the logo and text */
+}
+
+.bottom-content {
+    flex: 1; /* Allow content to take up available space */
+}
+
+.bottom-content h2 {
+    margin: 0 0 10px; /* Remove default margin and add space below */
+    font-size: 24px; /* Adjust font size for the heading */
+}
+
+.bottom-content p {
+    font-size: 16px; /* Adjust font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+.red-banner {
+    background-color: rgb(190, 6, 6); /* Set background color to red */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center the text */
+    padding: 5px 0; /* Add some vertical padding for spacing */
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 8px; /* Set a slightly larger font size for better readability */
+    line-height: .1; /* Add line height for vertical spacing */
+}
+
