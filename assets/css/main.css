@@ -1,5 +1,5 @@
 nav {
-    background-color: #2e7930;
+    background-color: red;
     padding: 10px;
 }
 
@@ -26,4 +26,8 @@ nav a {
 
 nav a:hover {
     background-color: #7fd186;
+}
+
+#UMD {
+    text-align: center;
 }
