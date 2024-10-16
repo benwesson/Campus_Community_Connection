@@ -37,17 +37,30 @@ nav a:hover {
 }
 
 .btn {
-    background-color: #2e7930; /* Button background color */
     color: #ffffff; /* Button text color */
     text-decoration: none; /* Remove underline from button links */
     padding: 5px 15px; /* Padding for buttons */
-    border-radius: 25px; /* Rounded corners for buttons */
+    border-radius: 10px; /* Rounded corners for buttons */
     margin-left: 10px; /* Space between buttons */
     transition: background-color 0.3s ease; /* Transition effect on hover */
 }
 
-.btn:hover {
-    background-color: #7fd186; /* Change color on hover */
+/* Specific styles for Login button */
+.btn.login {
+    background-color: #2e7930; /* Green background color for Login button */
+}
+
+.btn.login:hover {
+    background-color: #4caf50; /* Darker green on hover */
+}
+
+/* Specific styles for Register button */
+.btn.register {
+    background-color: #007bff; /* Blue background color for Register button */
+}
+
+.btn.register:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 
