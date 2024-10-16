@@ -1,5 +1,5 @@
 nav {
-    background-color: #2e7930;
+    background-color: red;
     padding: 10px;
 }
 
@@ -28,6 +28,7 @@ nav a:hover {
     background-color: #7fd186;
 }
 
+<<<<<<< HEAD
 .main_banner {
     width: 100%; /* Make the banner full width */
     height: 300px; /* Set a height for the banner */
@@ -111,3 +112,8 @@ nav a:hover {
     line-height: .1; /* Add line height for vertical spacing */
 }
 
+=======
+#UMD {
+    text-align: center;
+}
+>>>>>>> d83085d3e1e9d361e1e507d334b60e4cd9f94e34
