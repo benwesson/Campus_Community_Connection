@@ -200,7 +200,7 @@ nav {
 }
 
 .text-content {
-    flex: 1; /* Allow text content to take up available space */
+    margin-left: 100px;
     padding: 50px;
 }
 
