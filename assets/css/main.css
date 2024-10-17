@@ -346,7 +346,17 @@ nav {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    width: 300px; /* Adjusted to make the modal smaller */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Align text in the form to the left */
+.modal-content form {
+    text-align: left; /* Aligns text inside the form to the left */
+}
+
+.modal-content h2 {
+    text-align: center;
 }
 
 .close {
@@ -365,15 +375,14 @@ nav {
 form {
     display: flex;
     flex-direction: column;
-}
-
-form label {
-    margin: 10px 0 5px;
+    align-items: center; /* Center the elements horizontally */
 }
 
 form input {
+    width: 100%; /* Full width input */
     padding: 10px;
     margin-bottom: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 
 .btn.submit {
@@ -383,9 +392,93 @@ form input {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    width: 120px; /* Slightly larger button */
+    text-align: center;
+    border-radius: 5px; /* Optional: rounded corners */
 }
 
 .btn.submit:hover {
     background-color: #45a049;
 }
 
+/* Forgot Password */
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.forgot-password a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Option */
+.sign-up-option {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.sign-up-option p {
+    font-size: 14px;
+}
+
+.sign-up-option a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up-option a:hover {
+    text-decoration: underline;
+}
+
+/* Terms and Conditions */
+.terms-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.terms-container input[type="checkbox"] {
+    margin-right: 2px;
+}
+
+.terms-container label {
+    font-size: 13px;
+}
+
+.terms-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms-container a:hover {
+    text-decoration: underline;
+}
+
+/* Sign In Option */
+.signin-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signin-link p {
+    font-size: 14px;
+}
+
+.signin-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
