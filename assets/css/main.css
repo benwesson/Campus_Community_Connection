@@ -1,3 +1,11 @@
+/* Reset margin and padding for the body and html elements */
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
 
 .title {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -34,11 +42,26 @@ nav {
     padding: 15px 20px; /* Padding for links */
     display: block; /* Make the entire link area clickable */
     font-size: 16px; /* Font size for links */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+    position: relative; /* For positioning the hover effect */
 }
 
-.navbar a:hover {
-    background-color: #555; /* Darker background color on hover */
+/* Add underline effect starting from the middle */
+.navbar a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning relative to the link */
+    left: 50%; /* Start at the middle of the link */
+    bottom: 0; /* Place at the bottom of the link */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Height of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
+    transform-origin: center; /* Set origin for the width expansion */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Expand the underline to full width */
+    left: 0; /* Adjust to start from the beginning */
 }
 
 /* Dropdown Styling */
@@ -121,6 +144,7 @@ nav {
     max-width: 80%; /* Full-width slider */
     margin: 20px auto; /* Center the slider */
     overflow: hidden; /* Hide overflow */
+    padding: 20px;
 }
 
 .slides {
@@ -150,10 +174,12 @@ nav {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 10; /* Ensure arrows are above other content */
+
 }
 
 .next {
-    right: 0;
+    right: 20px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -164,7 +190,7 @@ nav {
 /* Fading effect for slides */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 }
 
 @keyframes fade {
@@ -188,26 +214,30 @@ nav {
 }
 
 .banner_aside {
-    padding: 20px; /* Add some padding around the text */
-    background-color: #f9f9f9; /* Light background color */
-    border-top: 2px solid #ccc; /* Optional border for separation */
+    background-color: #ffffff; /* Light background color */
+  
 }
 
 .aside_content {
     display: flex; /* Use Flexbox for layout */
     justify-content: space-between; /* Space out the text and logo */
     align-items: center; /* Center content vertically */
+    padding: 20px; /* Add some padding around the text */
+
 }
 
 .text-content {
     margin-left: 100px;
     padding: 50px;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .logo-image {
     width: 300px; /* Set a width for the logo */
     height: 300px; /* Maintain aspect ratio */
     margin: 50px;
+    margin-right: 150px;
 }
 
 .banner_aside h2 {
