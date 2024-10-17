@@ -118,7 +118,7 @@ nav {
 /* Image Slider Styling */
 .slider {
     position: relative;
-    max-width: 100%; /* Full-width slider */
+    max-width: 80%; /* Full-width slider */
     margin: 20px auto; /* Center the slider */
     overflow: hidden; /* Hide overflow */
 }
