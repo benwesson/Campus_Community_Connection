@@ -14,31 +14,55 @@
     <div class="red-banner">
         <h1>UNIVERSITY OF MARYLAND</h1>
     </div>
-    <nav id="navBar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+
+    <div class="title">
+        <h1>Campus Community Connection</h1>
+
         <div class="nav-buttons">
             <a href="login.html" class="btn login">LOGIN</a>
             <a href="register.html" class="btn register">REGISTER</a>
         </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="projects.html" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="#">Project 1</a>
+                    <a href="#">Project 2</a>
+                    <a href="#">Project 3</a>
+                    <a href="#">Project 4</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
     </nav>
-
-
-
-    <!-- Banner across page -->
-    <div class="main_banner">
-        <img src="assets/images/banner.jpeg" alt="Banner Image" class="banner-image">
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <!-- First Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/banner.jpeg" alt="Slide 1">
+            </div>
+            <!-- Second Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/CCC_project_image.jpg" alt="Slide 2">
+            </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
     <!-- Aside for title and text -->
     <aside class="banner_aside">
         <div class="aside_content">
             <div class="text-content">
-                <h2>Campus Community Connection</h2>
+                <h1>Campus Community Connection</h1>
 
                 <p>The Campus Community Connection encourages students and faculty at the University of Maryland to
                     explore community-based projects with local government jurisdictions.
@@ -63,6 +87,9 @@
             <img src="assets/images/info-logo.png" alt="Info Logo" class="info-logo">
         </a>
     </div>
+
+    <script src="assets/js/script.js"></script>
+
 
 </body>
 
