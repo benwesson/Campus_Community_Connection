@@ -93,7 +93,7 @@ def main(folder_path):
                     # Check if both data and location are not None
                     if paragraph_text and heading_text:
                         # Create a unique location ID by combining heading and index
-                        location_id = f"{heading_text.replace(" ", ""):}_{i}"  # e.g., "Location_1", "Location_2"
+                        location_id = f"{str(heading_text.lower().replace(" ", "")):}_{i}"  # e.g., "Location_1", "Location_2"
 
                         # Check if a document with the same location ID already exists
                         existing_document = collection.find_one({
@@ -122,8 +122,4 @@ def main(folder_path):
 if __name__ == "__main__":
     main(os.getenv("projectPath"))
 
-    # Close the database connection
-    closeConnection(client)
 
-
-main(os.getenv("projectPath"))
