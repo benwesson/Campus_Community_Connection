@@ -482,3 +482,20 @@ form input {
 .signin-link a:hover {
     text-decoration: underline;
 }
+
+#redButton {
+    background-color: red;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#redButton:hover{
+    background-color: darkred;
+    color: white;
+    
+
+}
