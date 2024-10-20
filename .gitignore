@@ -1,3 +1,4 @@
 backend/scraper/campuscommunityconnection
 backend/.env
 backend/node_modules
+.env
