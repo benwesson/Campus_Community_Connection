@@ -2,13 +2,20 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contactpage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Community Connection</title>
+ 
+   
 </head>
 
 <body>
+    <script>
+        function contactButton() {
+            location.replace("contact.html")
+        }
+    </script>
 
     <!-- Thin Red Banner -->
     <div class="red-banner">
@@ -43,51 +50,34 @@
         </ul>
     </nav>
     
-
-    <!-- Aside for title and text -->
-    <aside class="banner_aside">
-        <div class="aside_content">
-            <div class="text-content-contact">
-                <h1>Contact Us</h1>
-
-                <p>Interested in joining any of our ongoing or future projects? Contact us today to become
-                     a part of the Campus Community Connection! We strive to create a better and more active community by 
-                     bringing people together to work on community projects.
-                     All projects are volunteer-based.</p>
-
-                <p>For more information complete the following form :</p>
-                <form action="index.html">
-                    <label for="name">Name (required)</label><br>
-                    <input type="text" id="name" name="name"><br>
-
-                    <label for="email">Email (required)</label><br>
-                    <input type="text" id="email" name="email"><br>
-
-                    <label for="Phone">Phone</label><br>
-                    <input type="text" id="phone" name="phone"><br>
-
-                    <input type="submit" value="Send">
-                    <p>How are you part of the greater College Park area (College Park, Hyattsville, University Park, or Riverdale Park)?</p>
-                    <label for="resident">Resident</label>
-                    <input type="radio" id="html" value="resident">
-                    
-                    <label for="student">Student</label>
-                    <input type="radio" id="student" value="student">
-
-                    <label for="worker">Worker</label>
-                    <input type="radio" id="worker" value="worker">
-
-                    <label for="other">Other</label>
-                    <input type="radio" id="other" value="other">
-                    
-                    
-                  </form>
-                  
+       <!-- Main Content for Contact Us Page -->
+       <div class="container">
+        <main>
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Interested in joining any of our ongoing or future projects? Contact us today to become a part of the Campus Community Connection! 
+                    We strive to create a better and more active community by bringing people together to work on community projects. All projects are volunteer-based.
+                    For more information complete the following form :</p>
+                <p><span>&#9993;</span> afellows@umd.edu</p>
+                <p><span>&#127970;</span> 4161 Fieldhouse Dr #1109d, Patuxent Building, College Park, MD 20742</p>
             </div>
-            <img src="assets/images/logo.png" alt="Logo" class="logo-image">
-        </div>
-
-    </aside>
+            <div class="contact-form-div">
+                <form class = "contact-form" action="#" method="post">
+                    <div class="contact-form-row">
+                        <input class = "contact-input" type="text" placeholder="First Name">
+                        <input class = "contact-input"type="text" placeholder="Last Name">
+                        
+                    </div>
+        
+                    <input class = "contact-input" type="text" placeholder="Email">
+                    <input class = "contact-input" type="text" placeholder="phone">
+                    <input class = "contact-input" type="text" placeholder="Subject">
+                    <textarea placeholder="Message"></textarea>
+                    <button class ="send-button" type="submit">SEND</button>
+                </form>
+            </div>
+        </main>
+    </div>
 
     <!-- Bottom Section -->
     <div class="bottom-section">

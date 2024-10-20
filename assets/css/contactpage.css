@@ -1,0 +1,576 @@
+/* Reset margin and padding for the body and html elements */
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+
+.title {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color: #f9f9f9;
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space out the title and buttons */
+    align-items: center; /* Center vertically */
+    padding: 10px 10px; /* Add padding for better spacing */
+}
+
+/* General Navbar Styling */
+nav {
+    background-color: #333; /* Dark background color for the navbar */
+    padding: 5px 0; /* Padding around the navbar */
+}
+
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use Flexbox to layout the navbar items */
+    justify-content: center; /* Center the navbar items */
+    align-items: center; /* Vertically align items */
+}
+
+.navbar li {
+    position: relative; /* Necessary for the dropdown */
+}
+
+.navbar a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 15px 20px; /* Padding for links */
+    display: block; /* Make the entire link area clickable */
+    font-size: 16px; /* Font size for links */
+    transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+    position: relative; /* For positioning the hover effect */
+}
+
+/* Add underline effect starting from the middle */
+.navbar a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning relative to the link */
+    left: 50%; /* Start at the middle of the link */
+    bottom: 0; /* Place at the bottom of the link */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Height of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
+    transform-origin: center; /* Set origin for the width expansion */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Expand the underline to full width */
+    left: 0; /* Adjust to start from the beginning */
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer; /* Show pointer when hovering over dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it below the parent */
+    background-color: #333; /* Same background color as navbar */
+    min-width: 160px; /* Set a minimum width */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for dropdown */
+    z-index: 1; /* Ensure dropdown is above other elements */
+}
+
+.dropdown-content a {
+    color: white; /* White text for dropdown links */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display to ensure full width is clickable */
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Darker background on hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown content on hover */
+}
+
+/* Responsive Adjustments (optional) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the navbar items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .dropdown-content {
+        position: static; /* Position dropdown normally in mobile view */
+    }
+}
+
+.btn {
+    color: #ffffff; /* Button text color */
+    text-decoration: none; /* Remove underline from button links */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 10px; /* Rounded corners for buttons */
+    margin-left: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease; /* Transition effect on hover */
+}
+
+/* Specific styles for Login button */
+.btn.login {
+    background-color: #2e7930; /* Green background color for Login button */
+}
+
+.btn.login:hover {
+    background-color: #4caf50; /* Darker green on hover */
+}
+
+/* Specific styles for Register button */
+.btn.register {
+    background-color: #007bff; /* Blue background color for Register button */
+}
+
+.btn.register:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Image Slider Styling */
+.slider {
+    position: relative;
+    max-width: 80%; /* Full-width slider */
+    margin: 20px auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow */
+    padding: 20px;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+}
+
+.slide img {
+    width: 100%; /* Make images cover full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10; /* Ensure arrows are above other content */
+
+}
+
+.next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading effect for slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .prev, .next {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+
+.banner-image {
+    width: 100%; /* Make the image cover the full width */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+}
+
+.banner_aside {
+    background-color: #ffffff; /* Light background color */
+  
+}
+
+.aside_content {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out the text and logo */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Add some padding around the text */
+
+}
+
+.text-content {
+    margin-left: 100px;
+    padding: 50px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 20px;
+}
+
+.text-content h1{
+    font-size: 40px;
+}
+
+.logo-image {
+    width: 300px; /* Set a width for the logo */
+    height: 300px; /* Maintain aspect ratio */
+    margin: 50px;
+    margin-right: 150px;
+}
+
+.banner_aside h2 {
+    font-size: 24px; /* Adjust the font size for the title */
+    margin-bottom: 10px; /* Space between title and text */
+}
+
+.banner_aside p {
+    font-size: 16px; /* Adjust the font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+.bottom-section {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center content vertically */
+    background-color: #343435; /* Dark gray background color */
+    padding: 20px; /* Add padding */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+}
+
+.info-logo {
+    width: 300px; /* Set a width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the logo and columns */
+}
+
+.info-columns {
+    display: flex; /* Flexbox for the three columns */
+    justify-content: flex-end; /* Align columns to the right */
+    flex: 1; /* Allow columns to take up the remaining space */
+    text-align: right; /* Align text to the right in each column */
+}
+
+.column {
+    flex: 1; /* Allow columns to take up equal space */
+    margin: 0 15px; /* Add margin between columns */
+    color: #ffffff; /* White text color */
+}
+
+.column h3 {
+    margin-bottom: 10px; /* Add space below the heading */
+    font-size: 18px; /* Font size for headings */
+    color: #ffffff; /* White heading color */
+    text-align: center;
+}
+
+.column p, .column a {
+    font-size: 16px; /* Font size for paragraphs and links */
+    line-height: 1.5; /* Line spacing for readability */
+    color: #dcdcdc; /* Light gray text color */
+    text-decoration: none; /* Remove underline from links */
+    text-align: center;
+}
+
+.column a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+@media screen and (max-width: 768px) {
+    .bottom-section {
+        flex-direction: column; /* Stack logo and columns on smaller screens */
+        text-align: center; /* Center the content */
+    }
+
+    .info-logo {
+        margin-bottom: 20px; /* Add space below the logo */
+    }
+
+    .info-columns {
+        flex-direction: column; /* Stack the columns vertically */
+    }
+
+    .column {
+        margin: 10px 0; /* Add margin between the stacked columns */
+    }
+}
+.red-banner {
+    background-color: rgb(190, 6, 6); /* Set background color to red */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center the text */
+    padding: 5px 0; /* Add some vertical padding for spacing */
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 8px; /* Set a slightly larger font size for better readability */
+    line-height: .1; /* Add line height for vertical spacing */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Adjusted to make the modal smaller */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Align text in the form to the left */
+.modal-content form {
+    text-align: left; /* Aligns text inside the form to the left */
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the elements horizontally */
+}
+
+form input {
+    width: 100%; /* Full width input */
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.btn.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 120px; /* Slightly larger button */
+    text-align: center;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.btn.submit:hover {
+    background-color: #45a049;
+}
+
+/* Forgot Password */
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.forgot-password a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Option */
+.sign-up-option {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.sign-up-option p {
+    font-size: 14px;
+}
+
+.sign-up-option a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up-option a:hover {
+    text-decoration: underline;
+}
+
+/* Terms and Conditions */
+.terms-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.terms-container input[type="checkbox"] {
+    margin-right: 2px;
+}
+
+.terms-container label {
+    font-size: 13px;
+}
+
+.terms-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms-container a:hover {
+    text-decoration: underline;
+}
+
+/* Sign In Option */
+.signin-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signin-link p {
+    font-size: 14px;
+}
+
+.signin-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+#redButton {
+    background-color: red;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#redButton:hover{
+    background-color: darkred;
+    color: white;
+    
+
+}
+
+
+
+/* Main Content for Contact Us */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Contact Form Styling */
+.contact-form-div {
+    flex: 2;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+.send-button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-button:hover {
+    background-color: #555;
+}
