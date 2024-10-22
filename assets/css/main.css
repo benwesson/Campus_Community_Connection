@@ -480,8 +480,9 @@ form input {
 }
 
 #redButton {
-    background-color: red;
+    background-color: rgb(204, 0, 0);
     text-align: center;
+    padding: 5px 8px;
     border-radius: 12px;
     color: white;
     border: none;

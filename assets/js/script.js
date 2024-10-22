@@ -55,3 +55,25 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error fetching project data:', error));
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('http://localhost:3000/footer-content')
+        .then(response => response.json())
+        .then(data => {
+            // Address
+            const addressElement = document.getElementById('address');
+            addressElement.innerHTML = `${data.address.street}<br>${data.address.city}`;
+
+            // Contact
+            const contactElement = document.getElementById('contact');
+            contactElement.innerHTML = `Name: ${data.contact.name}<br>Email: <a href="mailto:${data.contact.email}">${data.contact.email}</a>`;
+
+            // Pages
+            const pagesElement = document.getElementById('pages');
+            pagesElement.innerHTML = data.pages.map(page => `<a href="${page.url}">${page.name}</a>`).join('<br>');
+        })
+        .catch(error => {
+            console.error('Error fetching footer content:', error);
+        });
+});
+
+
