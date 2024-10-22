@@ -24,6 +24,7 @@
         </div>
     </div>
 
+    
     <!-- Navbar -->
     <nav>
         <ul class="navbar">
@@ -31,17 +32,15 @@
             <li><a href="about.html">About Us</a></li>
             <li class="dropdown">
                 <a href="projects.html" class="dropbtn">Projects</a>
-                <div class="dropdown-content">
-                    <a href="#">Project 1</a>
-                    <a href="#">Project 2</a>
-                    <a href="#">Project 3</a>
-                    <a href="#">Project 4</a>
-                    <!-- add more as needed -->
+                <div class="dropdown-content" id="project-list">
+                    <!-- Projects will be dynamically inserted here -->
                 </div>
             </li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+
+
     <!-- Image Slider -->
     <div class="slider">
         <div class="slides">
@@ -105,57 +104,59 @@
         </div>
     </div>
 
- <!-- Login Modal -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('loginModal')">&times;</span>
-        <h2>Login</h2>
-        <form>
-            <input type="text" id="login-username" name="username" placeholder="Username" required>
-            <input type="password" id="login-password" name="password" placeholder="Password" required>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <input type="text" id="login-username" name="username" placeholder="Username" required>
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
 
-            <button type="submit" class="btn submit">Login</button>
-        </form>
+                <button type="submit" class="btn submit">Login</button>
+            </form>
 
-        <!-- Forgot Password Option -->
-        <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
-        </div>
-
-        <!-- Sign Up Option -->
-        <div class="sign-up-option">
-            <p>Don't have an account? <a href="#" onclick="openModal('registerModal')">Sign Up!</a></p>
-        </div>
-    </div>
-</div>
-
-<!-- Register Modal -->
-<div id="registerModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('registerModal')">&times;</span>
-        <h2>Create An Account</h2>
-        <form>
-            <input type="text" id="register-fullname" name="fullname" placeholder="Full Name" required>
-            <input type="email" id="register-email" name="email" placeholder="Email" required>
-            <input type="text" id="register-username" name="username" placeholder="Username" required>
-            <input type="password" id="register-password" name="password" placeholder="Password" required>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-            
-            <!-- Terms and Conditions Checkbox -->
-            <div class="terms-container">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            <!-- Forgot Password Option -->
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
             </div>
-            
-            <button type="submit" class="btn submit">Register</button>
-        </form>
 
-        <!-- Already Have an Account -->
-        <div class="signin-link">
-            <p>Already have an account? <a href="#" onclick="closeModal('registerModal'); openModal('loginModal');">Sign in!</a></p>
+            <!-- Sign Up Option -->
+            <div class="sign-up-option">
+                <p>Don't have an account? <a href="#" onclick="openModal('registerModal')">Sign Up!</a></p>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Create An Account</h2>
+            <form>
+                <input type="text" id="register-fullname" name="fullname" placeholder="Full Name" required>
+                <input type="email" id="register-email" name="email" placeholder="Email" required>
+                <input type="text" id="register-username" name="username" placeholder="Username" required>
+                <input type="password" id="register-password" name="password" placeholder="Password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+                    required>
+
+                <!-- Terms and Conditions Checkbox -->
+                <div class="terms-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+
+                <button type="submit" class="btn submit">Register</button>
+            </form>
+
+            <!-- Already Have an Account -->
+            <div class="signin-link">
+                <p>Already have an account? <a href="#"
+                        onclick="closeModal('registerModal'); openModal('loginModal');">Sign in!</a></p>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 

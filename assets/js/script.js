@@ -36,3 +36,22 @@ window.onclick = function(event) {
         event.target.style.display = 'none';
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projectList = document.getElementById("project-list");
+
+    
+    fetch('http://localhost:3000/projects')
+        .then(response => response.json())
+        .then(projects => {
+            // Loop through each project and create an <a> tag
+            projects.forEach(project => {
+                const projectLink = document.createElement('a');
+                projectLink.href = `/projects.html?id=${project.id}`;  // Link to a project detail page
+                projectLink.textContent = project.title;  // Set the project title as the link text
+                projectList.appendChild(projectLink);  // Add to dropdown content
+            });
+        })
+        .catch(error => console.error('Error fetching project data:', error));
+});
+
