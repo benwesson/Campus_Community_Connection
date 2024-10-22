@@ -514,6 +514,8 @@ form input {
     width: 400px;
 }
 
-
+.project-flex-div:hover {
+    color: crimson;
+}
 
 
