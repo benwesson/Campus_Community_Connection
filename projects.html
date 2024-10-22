@@ -9,6 +9,19 @@
 </head>
 
 <body>
+    <script>
+        function communityButton() {
+            location.replace("Jurisdictions.html")
+        }
+
+        function seeProjectsButton() {
+            location.replace("seeProjects.html")
+        }
+
+        function joinButton() {
+            location.replace("join.html")
+        }
+    </script>
 
     <!-- Thin Red Banner -->
     <div class="red-banner">
@@ -88,6 +101,7 @@
             <p class = ".project-flex-div-p">
                 Learn about the jurisdictions the Campus Community Connection is working with.
             </p>
+            <button id ="redButton" onclick = "communityButton()">Contact Us</button>
         </div>
 
         <!-- 2 -->    
@@ -96,8 +110,10 @@
             <p class = ".project-flex-div-p">
                 See all of the projects that UMD students are apart of.
             </p>
-            
+            <button id ="redButton" onclick = "seeProjectsButton()">Contact Us</button>
         </div>
+            
+        
 
         <!-- 3 -->  
         <div class = "project-flex-div">
@@ -105,7 +121,9 @@
             <p class = ".project-flex-div-p">
                 Learn about the opportunities for you to connect to the communites around UMD.
             </p>
+            <button id ="redButton" onclick = "joinButton()">Contact Us</button>
         </div>
+        
     </div>
 
     <!-- Bottom Section -->
