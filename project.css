@@ -33,9 +33,9 @@
 .project-Jurisdiction-Flex-Div {
     margin: 60px;
     padding: 10px;
-    background-color: lightgrey;
-    height: 400px;
-    width: 400px;
+    
+    color: white;
+    font-family: Helvetica;
 }
 /* normal  CSS*/
 /* Reset margin and padding for the body and html elements */
@@ -553,4 +553,22 @@ form input {
 
 .project-flex-div:hover {
     color: crimson;
+}
+
+#yellowButton {
+    background-color: #ffd200;
+    border-color: #ffd200;
+    border-style: solid;
+    padding: 10px;
+    font-family:Helvetica;
+    font-weight: bolder;
+    width: 225px;
+    
+}
+
+#yellowButton:hover {
+    background-color: transparent;
+    color: #ffd200;
+    
+    
 }
