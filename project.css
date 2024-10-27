@@ -1,3 +1,43 @@
+/* Parallax CSS */
+
+
+.outer-Space {
+    text-align: center;
+    font-size: 300%;
+    color: #4a4444; 
+    text-transform: uppercase;
+    letter-spacing: 1%;
+    margin: 10% 0;
+}
+
+.inner-Space {
+    text-align: center;
+    font-size: 275%;
+    color: #E5E5E5; 
+    text-transform: uppercase;
+    letter-spacing: 1%;
+    
+}
+
+.parallax {
+    background: url(terpimage1.jpg)  fixed 100%;
+    background-size: 130%;
+}
+
+.project-Jurisdiction-Flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project-Jurisdiction-Flex-Div {
+    margin: 60px;
+    padding: 10px;
+    
+    color: white;
+    font-family: Helvetica;
+}
+/* normal  CSS*/
 /* Reset margin and padding for the body and html elements */
 html, body {
     background-color: #ffffff;
@@ -515,4 +555,20 @@ form input {
     color: crimson;
 }
 
+#yellowButton {
+    background-color: #ffd200;
+    border-color: #ffd200;
+    border-style: solid;
+    padding: 10px;
+    font-family:Helvetica;
+    font-weight: bolder;
+    width: 225px;
+    
+}
 
+#yellowButton:hover {
+    background-color: transparent;
+    color: #ffd200;
+    
+    
+}
