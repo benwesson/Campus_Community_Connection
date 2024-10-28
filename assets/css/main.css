@@ -274,7 +274,11 @@ nav {
     align-items: flex-start; /* Align items at the start vertically */
     margin-top: 20px; /* Add margin above the section */
     padding: 20px; /* Add padding for better spacing */
+<<<<<<< HEAD
     
+=======
+    margin-bottom: 30px;
+>>>>>>> 5648c1c (updated about page)
 }
 
 .columns {
@@ -600,4 +604,56 @@ form input {
     color: crimson;
 }
 
+/* About Us Page Styling */
+.about-us {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px; /* Center content and limit width */
+}
 
+.card-container {
+    display: flex; /* Align cards in a single row */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Add space between cards */
+    margin-bottom: 20px; /* Space below each card container */
+}
+
+.card {
+    background-color: #ffffff7e;
+    border: 5px solid #fffb00;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1; /* Allow cards to grow and fill available space */
+    transition: transform 0.2s;
+}
+
+.commitment-card {
+    flex-basis: 100%; /* Make the commitment card take full width */
+}
+
+.card h2 {
+    color: #000000;
+}
+
+.card p {
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .card {
+        /* Allow cards to wrap on smaller screens */
+        flex: 1 1 45%; /* Allow two cards per row */
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex: 1 1 100%; /* Stack cards vertically on very small screens */
+    }
+}
