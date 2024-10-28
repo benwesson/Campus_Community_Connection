@@ -248,17 +248,18 @@ nav {
 
 .square-button {
     width: 120px; /* Set width of the square button */
-    background-color: rgb(209, 209, 3); /* Set button background color */
+    background-color: gold; /* Set button background color */
     border: none; /* Remove default border */
     color: black; /* Set text color */
     font-size: 16px; /* Set font size */
     padding: 10px;
     cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Add transition effect */
 }
 
 .square-button:hover {
-    background-color: gold; /* Change to a lighter yellow on hover */
+    background-color: transparent; /* Change to a lighter yellow on hover */
+    color: gold;
+    box-shadow: 0 0 0 2px gold; /* Gold border effect using box-shadow */
 }
 
 .intro-section p{
@@ -291,7 +292,8 @@ nav {
 }
 
 .yellow-button {
-    background-color: rgb(209, 209, 3); /* Set button background color */
+    background-color: gold; /* Set button background color */
+    border-color: gold;
     color: black; /* Text color */
     border: none; /* Remove default border */
     padding: 10px 20px; /* Padding for better spacing */
@@ -301,7 +303,9 @@ nav {
 }
 
 .yellow-button:hover {
-    background-color: gold; /* Change to a lighter yellow on hover */
+    background-color: transparent; /* Change to a lighter yellow on hover */
+    color: gold;
+    box-shadow: 0 0 0 2px gold; /* Gold border effect using box-shadow */
 }
 
 
@@ -420,15 +424,16 @@ nav {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 300px; /* Adjusted to make the modal smaller */
+    max-width: 25%;
     border-radius: 8px; /* Optional: rounded corners */
 }
 
@@ -527,12 +532,9 @@ form input {
     margin-top: 10px;
 }
 
-.terms-container input[type="checkbox"] {
-    margin-right: 2px;
-}
-
 .terms-container label {
     font-size: 13px;
+    display: inline;
 }
 
 .terms-container a {
