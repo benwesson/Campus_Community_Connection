@@ -209,7 +209,7 @@ nav {
 .slide img {
     width: 100%; /* Make images cover full width */
     height: 100%; /* Maintain aspect ratio */
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .prev:hover, .next:hover {
@@ -274,11 +274,8 @@ nav {
     align-items: flex-start; /* Align items at the start vertically */
     margin-top: 20px; /* Add margin above the section */
     padding: 20px; /* Add padding for better spacing */
-<<<<<<< HEAD
     
-=======
     margin-bottom: 30px;
->>>>>>> 5648c1c (updated about page)
 }
 
 .columns {
