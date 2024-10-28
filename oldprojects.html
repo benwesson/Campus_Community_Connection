@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Community Connection</title>
+</head>
+
+<body>
+    <script>
+        function communityButton() {
+            location.replace("Jurisdictions.html")
+        }
+
+        function seeProjectsButton() {
+            location.replace("seeProjects.html")
+        }
+
+        function joinButton() {
+            location.replace("join.html")
+        }
+    </script>
+
+    <!-- Thin Red Banner -->
+    <div class="red-banner">
+        <h1>UNIVERSITY OF MARYLAND</h1>
+    </div>
+
+    <div class="title">
+        <h1>Campus Community Connection</h1>
+
+        <div class="nav-buttons">
+            <a href="javascript:void(0)" class="btn login" onclick="openModal('loginModal')">LOGIN</a>
+            <a href="javascript:void(0)" class="btn register" onclick="openModal('registerModal')">REGISTER</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="projects.html" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="#">Project 1</a>
+                    <a href="#">Project 2</a>
+                    <a href="#">Project 3</a>
+                    <a href="#">Project 4</a>
+                    <!-- add more as needed -->
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <!-- First Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/banner.jpeg" alt="Slide 1">
+            </div>
+            <!-- Second Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/CCC_project_image.jpg" alt="Slide 2">
+            </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Aside for title and text -->
+    <aside class="banner_aside">
+        <div class="aside_content">
+            <div class="text-content">
+                <h1>Campus Community Connection</h1>
+
+                <p>The Campus Community Connection encourages students and faculty at the University of Maryland to
+                    explore community-based projects with local government jurisdictions.
+                    Project goals are aimed at greater sustainability and resiliency for the University and its
+                    surrounding community, strengthening ties between the campus and its neighbors,
+                    and fulfilling academic objectives while providing real-world experience and visible results for
+                    participants.</p>
+
+                <p>Participating communities include Prince George’s County, the City of College Park, the City of
+                    Hyattsville, the Town of Riverdale Park and the Town of University Park.
+                    These jurisdictions have identified 80 projects to collaboratively achieve with the University.</p>
+            </div>
+            <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+        </div>
+
+    </aside>
+
+    <div class = "project-flex">
+        <!-- 1 -->
+        <div class = "project-flex-div">
+            <h2>The Community</h2>
+            <p class = ".project-flex-div-p">
+                Learn about the jurisdictions the Campus Community Connection is working with.
+            </p>
+            <button id ="redButton" onclick = "communityButton()">Contact Us</button>
+        </div>
+
+        <!-- 2 -->    
+        <div class = "project-flex-div">
+            <h2>See All Projects</h2>
+            <p class = ".project-flex-div-p">
+                See all of the projects that UMD students are apart of.
+            </p>
+            <button id ="redButton" onclick = "seeProjectsButton()">Contact Us</button>
+        </div>
+            
+        
+
+        <!-- 3 -->  
+        <div class = "project-flex-div">
+            <h2>Join a Project</h2>
+            <p class = ".project-flex-div-p">
+                Learn about the opportunities for you to connect to the communites around UMD.
+            </p>
+            <button id ="redButton" onclick = "joinButton()">Contact Us</button>
+        </div>
+        
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <a href="https://ischool.umd.edu/">
+            <img src="assets/images/info-logo.png" alt="Info Logo" class="info-logo">
+        </a>
+
+        <!-- Columns for Address, Contact, and Pages -->
+        <div class="info-columns">
+            <div class="column">
+                <h3>Address</h3>
+                <p>University of Maryland<br>College Park, MD 20742</p>
+            </div>
+            <div class="column">
+                <h3>Contact</h3>
+                <p>Email: info@umd.edu<br>Phone: (301) 405-1000</p>
+            </div>
+            <div class="column">
+                <h3>Pages</h3>
+                <p><a href="index.html">Home</a><br><a href="about.html">About Us</a><br><a
+                        href="projects.html">Projects</a></p>
+            </div>
+        </div>
+    </div>
+
+ <!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <input type="text" id="login-username" name="username" placeholder="Username" required>
+            <input type="password" id="login-password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="btn submit">Login</button>
+        </form>
+
+        <!-- Forgot Password Option -->
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <!-- Sign Up Option -->
+        <div class="sign-up-option">
+            <p>Don't have an account? <a href="#" onclick="openModal('registerModal')">Sign Up!</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Create An Account</h2>
+        <form>
+            <input type="text" id="register-fullname" name="fullname" placeholder="Full Name" required>
+            <input type="email" id="register-email" name="email" placeholder="Email" required>
+            <input type="text" id="register-username" name="username" placeholder="Username" required>
+            <input type="password" id="register-password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            
+            <!-- Terms and Conditions Checkbox -->
+            <div class="terms-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+            
+            <button type="submit" class="btn submit">Register</button>
+        </form>
+
+        <!-- Already Have an Account -->
+        <div class="signin-link">
+            <p>Already have an account? <a href="#" onclick="closeModal('registerModal'); openModal('loginModal');">Sign in!</a></p>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
