@@ -137,14 +137,16 @@ nav {
 /* Image Slider Styling */
 .slider {
     position: relative;
-    max-width: 80%; /* Full-width slider */
-    margin: 20px auto; /* Center the slider */
+    max-width: 100%; /* Full-width slider */
+    height: 500px; /* Set desired fixed height for the slider */
     overflow: hidden; /* Hide overflow */
-    padding: 20px;
 }
 
 .slides {
     display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .slide {
@@ -152,47 +154,41 @@ nav {
     width: 100%;
 }
 
-.slide img {
-    width: 100%; /* Make images cover full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
+.slide.active {
+    display: block; /* Display only the active slide */
+    opacity: 1; /* Make active slide fully visible */
 }
 
 .prev, .next {
-    cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    z-index: 10; /* Ensure arrows are above other content */
-
+    font-size: 2rem;
+    color: rgb(180, 180, 180);
+    cursor: pointer;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+    border-radius: 3px;
+    transform: translateY(-50%);
 }
 
-.next {
-    right: 20px;
-    border-radius: 3px 0 0 3px;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.slide img {
+    width: 100%; /* Make images cover full width */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
 }
+
+.slide.active img {
+    transform: scale(1.1); /* Zoom effect on active slide (10% increase) */
+}
+
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Fading effect for slides */
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;
-}
-
-@keyframes fade {
-    from { opacity: 0.4 }
-    to { opacity: 1 }
-}
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
