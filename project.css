@@ -572,3 +572,10 @@ form input {
     
     
 }
+
+.horizontal-line hr {
+    border: none; /* Remove default border */
+    height: 5px; /* Set the height of the line */
+    
+    margin: 0;
+}
