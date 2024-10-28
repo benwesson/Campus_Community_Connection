@@ -1,5 +1,6 @@
 /* Reset margin and padding for the body and html elements */
 html, body {
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #000000; /* Fallback color */
     margin: 0;
     padding: 0;
@@ -143,10 +144,35 @@ nav {
 /* Image Slider Styling */
 .slider {
     position: relative;
-    max-width: 100%; /* Full-width slider */
+    width: 100%; /* Full-width slider */
     height: 500px; /* Set desired fixed height for the slider */
     overflow: hidden; /* Hide overflow */
 }
+
+@media screen and (max-width: 1200px) {
+    .slider {
+        height: 400px; /* Smaller height for medium screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .slider {
+        height: 300px; /* Smaller height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 250px; /* Height adjustment for tablets */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider {
+        height: 200px; /* Smaller height for mobile screens */
+    }
+}
+
 
 .slides {
     display: flex;
@@ -185,11 +211,6 @@ nav {
     height: 100%; /* Maintain aspect ratio */
     object-fit: cover;
 }
-
-.slide.active img {
-    transform: scale(1.1); /* Zoom effect on active slide (10% increase) */
-}
-
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -253,9 +274,11 @@ nav {
     align-items: flex-start; /* Align items at the start vertically */
     margin-top: 20px; /* Add margin above the section */
     padding: 20px; /* Add padding for better spacing */
+    margin-bottom: ;
 }
 
 .columns {
+    background: linear-gradient(180deg, #434343, #000000);
     flex: 0 0 30%; /* Set the column width to 30% of the parent */
     margin: 0 50px; /* Add some margin between columns */
     padding: 10px; /* Add padding for content inside columns */
