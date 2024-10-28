@@ -585,3 +585,8 @@ form input {
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px; /* Space between the logo and title */
 }
+
+.project-div-images {
+    height: 300px;
+    width: 300px;
+}
