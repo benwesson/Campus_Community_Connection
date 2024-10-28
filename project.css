@@ -544,10 +544,11 @@ form input {
 }
 
 .project-flex-div {
-    margin: 60px;
+    margin: 100px;
     padding: 10px;
     height: 400px;
-    width: 400px;
+    width: 250px;
+    font-family:Helvetica
 }
 
 .project-flex-div:hover {
@@ -588,7 +589,7 @@ form input {
 .image-zoom {
     padding: 50px;
     background-image: url("terpstudents.jpg");
-    background-size: 107%;
+    background-size: 108%;
     transition: transform .2s; /* Animation */
     width: 250px;
     height: 150px;
@@ -627,3 +628,7 @@ form input {
   .image-zoom3:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+
+
+
+  project-flex-div  font-family:Helvetica
