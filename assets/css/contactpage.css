@@ -580,3 +580,8 @@ main {
 .send-button:hover {
     background-color: #555;
 }
+
+.about-text-div {
+    margin: 100px;
+    padding: 100px;
+}
