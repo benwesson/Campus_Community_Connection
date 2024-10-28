@@ -2,35 +2,6 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 import pathlib
-from bs4 import BeautifulSoup 
-
-# Load environment variables
-load_dotenv()
-
-# Connect to MongoDB
-def connectDB():
-    client = MongoClient(os.getenv("mongodbURL"))
-    db = client[os.getenv("Database")]
-    collection = db[os.getenv("Collection")]
-    return client, collection
-
-def closeConnection(client): 
-    client.close()
-
-# Function to get all HTML files from a specified folder
-def get_html_files(folder_path):
-
-    html_files = []
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            if file.endswith(".html"):
-                html_files.append(os.path.join(root, file))
-    return html_files
-
-# Main function to read HTML files and insert data into MongoDB
-from pymongo import MongoClient
-from dotenv import load_dotenv
-import os
 from bs4 import BeautifulSoup
 
 # Load environment variables
