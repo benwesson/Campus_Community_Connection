@@ -1,19 +1,28 @@
 const express = require('express');
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const dotenv = require('dotenv'); // Import dotenv
+const dotenv = require('dotenv');
 const app = express();
 
 // Load environment variables from .env file
 dotenv.config();
 
+// Validate environment variables
+const { mongodbURL, Database, Collection } = process.env;
+if (!mongodbURL || !Database || !Collection) {
+  throw new Error('Missing required environment variables');
+}
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(process.env.mongodbURL, {
+const client = new MongoClient(mongodbURL, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
     deprecationErrors: true,
   }
 });
+
+// Middleware to parse JSON bodies
+app.use(express.json());
 
 // Connect to MongoDB and set up the API
 async function run() {
@@ -22,38 +31,39 @@ async function run() {
     await client.connect();
     console.log("Connected to MongoDB!");
 
-    const db = client.db(process.env.Database); // Replace with your database name
+    const db = client.db(Database);
 
     // Define API endpoint to retrieve data
     app.get('/api/data', async (req, res) => {
       try {
-        const data = await db.collection(process.env.Collection).find().toArray(); // Replace with your collection name
+        const data = await db.collection(Collection).find().toArray();
         res.json(data);
       } catch (err) {
+        console.error(err);
         res.status(500).send({ message: 'Error retrieving data' });
       }
     });
     
     // API endpoint to get data by location_id
     app.get('/api/data/:location', async (req, res) => {
-      const location = req.params.location; // Get the location from the URL parameter
-      const locationPattern = new RegExp(`^${location}_`); // Create a regex pattern for matching
+      const location = req.params.location;
+      const locationPattern = new RegExp(`^${location}_`);
 
       try {
-          const data = await db.collection(process.env.Collection).find({
-              location_id: { $regex: locationPattern } // Use regex to find matching location_id
+          const data = await db.collection(Collection).find({
+              location_id: { $regex: locationPattern }
           }).toArray();
 
           if (data.length > 0) {
-              res.json(data); // Return the matching data
+              res.json(data);
           } else {
               res.status(404).send({ message: 'No data found for the specified location' });
           }
       } catch (err) {
+          console.error(err);
           res.status(500).send({ message: 'Error retrieving data' });
       }
     });
-
 
     // Start the server
     app.listen(3000, () => {
@@ -67,3 +77,10 @@ async function run() {
 
 // Run the function to connect to MongoDB and start the server
 run().catch(console.dir);
+
+// Close the MongoDB connection gracefully on exit
+process.on('SIGINT', async () => {
+  await client.close();
+  console.log('MongoDB connection closed');
+  process.exit(0);
+});
