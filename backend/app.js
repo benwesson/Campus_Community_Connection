@@ -33,6 +33,55 @@ async function run() {
 
     const db = client.db(Database);
 
+        // User signup endpoint
+        app.post('/api/signup', async (req, res) => {
+          const { username, password } = req.body;
+    
+          if (!username || !password) {
+            return res.status(400).send({ message: 'Username and password are required' });
+          }
+    
+          const hashedPassword = await bcrypt.hash(password, 10);
+    
+          try {
+            const result = await db.collection(Collection).insertOne({
+              username,
+              password: hashedPassword
+            });
+            res.status(201).send({ message: 'User  created successfully' });
+          } catch (err) {
+            console.error(err);
+            res.status(500).send({ message: 'Error creating user' });
+          }
+        });
+    
+        // User login endpoint
+        app.post('/api/login', async (req, res) => {
+          const { username, password } = req.body;
+    
+          if (!username || !password) {
+            return res.status(400).send({ message: 'Username and password are required' });
+          }
+    
+          try {
+            const user = await db.collection(Collection).findOne({ username });
+            if (!user) {
+              return res.status(401).send({ message: 'Invalid credentials' });
+            }
+    
+            const isMatch = await bcrypt.compare(password, user.password);
+            if (!isMatch) {
+              return res.status(401).send({ message: 'Invalid credentials' });
+            }
+    
+            const token = jwt.sign({ id: user._id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
+            res.json({ token });
+          } catch (err) {
+            console.error(err);
+            res.status(500).send({ message: 'Error logging in' });
+          }
+        });
+
     // Define API endpoint to retrieve data
     app.get('/api/data', async (req, res) => {
       try {
