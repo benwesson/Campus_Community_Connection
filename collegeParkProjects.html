@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/collegeParkProjects.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Community Connection</title>
+ 
+   
+</head>
+
+<body>
+    <script>
+        function contactButton() {
+            location.replace("contact.html")
+        }
+    </script>
+
+    <!-- Thin Red Banner -->
+    <div class="red-banner">
+        <h1>UNIVERSITY OF MARYLAND</h1>
+    </div>
+
+    <div class="title">
+        <a href="index.html">
+            <img src="assets/icons/ccc-logo.png" alt="ccc-logo" class="title-logo"> <!-- Image for the title -->
+        </a>
+
+        <div class="nav-buttons">
+            <a href="javascript:void(0)" class="btn login" onclick="openModal('loginModal')">LOGIN</a>
+            <a href="javascript:void(0)" class="btn register" onclick="openModal('registerModal')">REGISTER</a>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="projects.html" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="#">Project 1</a>
+                    <a href="#">Project 2</a>
+                    <a href="#">Project 3</a>
+                    <a href="#">Project 4</a>
+                    <!-- add more as needed -->
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="project-detail-div-flex">
+
+        
+        
+        
+       
+        <div class="project-detail-header">
+            <p>College Park</p>
+        </div>
+
+        <div class="project-detail-header">
+
+            <p>Area A – Stormwater Management</p>
+        </div>
+
+        <div class="project-detail-div">
+            <p>1. Stormwater Report Follow-up</p>
+            <p>The University of Maryland Environmental Finance Center recently reviewed College Park’s priorities for planning and implementing stormwater improvements, in part to support compliance of with the Municipal Separated Storm Sewer System (MS4) permit issued by the State. The University may be able to collaborate on the development and implementation of all or part of an integrated water resource management plan for College Park, including entrepreneurial opportunities for green roofs, green walls, downspout disconnects, rain barrels, rain harvesting, rain gardens, swales, tree canopy enhancements, other green scaping and water-retaining methods with a goal of mimicking forest hydrology for the city. Students could study co-benefits related to climate change, energy cost-reductions, aesthetic improvements, property value increase, and economic development and job support, and analyze cost reductions through integration with transportation and other infrastructural improvements (e.g., complete streets, buried power lines, local generation of clean energy).</p>
+        </div>
+
+        <div class="project-detail-div">
+            <p>1. Stormwater Report Follow-up</p>
+            <p>The University of Maryland Environmental Finance Center recently reviewed College Park’s priorities for planning and implementing stormwater improvements, in part to support compliance of with the Municipal Separated Storm Sewer System (MS4) permit issued by the State. The University may be able to collaborate on the development and implementation of all or part of an integrated water resource management plan for College Park, including entrepreneurial opportunities for green roofs, green walls, downspout disconnects, rain barrels, rain harvesting, rain gardens, swales, tree canopy enhancements, other green scaping and water-retaining methods with a goal of mimicking forest hydrology for the city. Students could study co-benefits related to climate change, energy cost-reductions, aesthetic improvements, property value increase, and economic development and job support, and analyze cost reductions through integration with transportation and other infrastructural improvements (e.g., complete streets, buried power lines, local generation of clean energy).</p>
+        </div>
+
+        <div class="project-detail-div">
+            <p>1. Stormwater Report Follow-up</p>
+            <p>The University of Maryland Environmental Finance Center recently reviewed College Park’s priorities for planning and implementing stormwater improvements, in part to support compliance of with the Municipal Separated Storm Sewer System (MS4) permit issued by the State. The University may be able to collaborate on the development and implementation of all or part of an integrated water resource management plan for College Park, including entrepreneurial opportunities for green roofs, green walls, downspout disconnects, rain barrels, rain harvesting, rain gardens, swales, tree canopy enhancements, other green scaping and water-retaining methods with a goal of mimicking forest hydrology for the city. Students could study co-benefits related to climate change, energy cost-reductions, aesthetic improvements, property value increase, and economic development and job support, and analyze cost reductions through integration with transportation and other infrastructural improvements (e.g., complete streets, buried power lines, local generation of clean energy).</p>
+        </div>
+
+        
+        
+
+        
+                
+       
+            
+    </div>
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <a href="https://ischool.umd.edu/">
+            <img src="assets/images/info-logo.png" alt="Info Logo" class="info-logo">
+        </a>
+
+        <!-- Columns for Address, Contact, and Pages -->
+        <div class="info-columns">
+            <div class="column">
+                <h3>Address</h3>
+                <p>University of Maryland<br>College Park, MD 20742</p>
+            </div>
+            <div class="column">
+                <h3>Contact</h3>
+                <p>Email: info@umd.edu<br>Phone: (301) 405-1000</p>
+            </div>
+            <div class="column">
+                <h3>Pages</h3>
+                <p><a href="index.html">Home</a><br><a href="about.html">About Us</a><br><a
+                        href="projects.html">Projects</a></p>
+            </div>
+        </div>
+    </div>
+
+ <!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <input type="text" id="login-username" name="username" placeholder="Username" required>
+            <input type="password" id="login-password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="btn submit">Login</button>
+        </form>
+
+        <!-- Forgot Password Option -->
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <!-- Sign Up Option -->
+        <div class="sign-up-option">
+            <p>Don't have an account? <a href="#" onclick="openModal('registerModal')">Sign Up!</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Create An Account</h2>
+        <form>
+            <input type="text" id="register-fullname" name="fullname" placeholder="Full Name" required>
+            <input type="email" id="register-email" name="email" placeholder="Email" required>
+            <input type="text" id="register-username" name="username" placeholder="Username" required>
+            <input type="password" id="register-password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            
+            <!-- Terms and Conditions Checkbox -->
+            <div class="terms-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+            
+            <button type="submit" class="btn submit">Register</button>
+        </form>
+
+        <!-- Already Have an Account -->
+        <div class="signin-link">
+            <p>Already have an account? <a href="#" onclick="closeModal('registerModal'); openModal('loginModal');">Sign in!</a></p>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html> 

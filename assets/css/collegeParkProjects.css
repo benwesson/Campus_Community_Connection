@@ -1,17 +1,11 @@
 /* Reset margin and padding for the body and html elements */
-html, body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #000000; /* Fallback color */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
-}
+
 
 
 .title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000000;
-    color: hsl(62, 100%, 50%);
+    color: #f9f9f9;
     display: flex; /* Enable flexbox */
     justify-content: space-between; /* Space out the title and buttons */
     align-items: center; /* Center vertically */
@@ -26,7 +20,7 @@ html, body {
 
 /* General Navbar Styling */
 nav {
-    background: linear-gradient(180deg, #000000, #626262);
+    background-color: #333; /* Dark background color for the navbar */
     padding: 5px 0; /* Padding around the navbar */
 }
 
@@ -60,8 +54,8 @@ nav {
     left: 50%; /* Start at the middle of the link */
     bottom: 0; /* Place at the bottom of the link */
     width: 0; /* Initial width is 0 */
-    height: 3px; /* Height of the underline */
-    background-color: gold; /* Color of the underline */
+    height: 2px; /* Height of the underline */
+    background-color: #ffffff; /* Color of the underline */
     transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
     transform-origin: center; /* Set origin for the width expansion */
 }
@@ -94,6 +88,10 @@ nav {
     padding: 12px 16px; /* Padding for dropdown links */
     text-decoration: none; /* Remove underline */
     display: block; /* Block display to ensure full width is clickable */
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Darker background on hover */
 }
 
 /* Show the dropdown on hover */
@@ -141,45 +139,17 @@ nav {
 }
 
 
-
 /* Image Slider Styling */
 .slider {
     position: relative;
-    width: 100%; /* Full-width slider */
-    height: 500px; /* Set desired fixed height for the slider */
+    max-width: 80%; /* Full-width slider */
+    margin: 20px auto; /* Center the slider */
     overflow: hidden; /* Hide overflow */
+    padding: 20px;
 }
-
-@media screen and (max-width: 1200px) {
-    .slider {
-        height: 400px; /* Smaller height for medium screens */
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .slider {
-        height: 300px; /* Smaller height for smaller screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .slider {
-        height: 250px; /* Height adjustment for tablets */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .slider {
-        height: 200px; /* Smaller height for mobile screens */
-    }
-}
-
 
 .slides {
     display: flex;
-    position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 .slide {
@@ -187,36 +157,47 @@ nav {
     width: 100%;
 }
 
-.slide.active {
-    display: block; /* Display only the active slide */
-    opacity: 1; /* Make active slide fully visible */
+.slide img {
+    width: 100%; /* Make images cover full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .prev, .next {
+    cursor: pointer;
     position: absolute;
     top: 50%;
-    font-size: 2rem;
-    color: rgb(180, 180, 180);
-    cursor: pointer;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-    border-radius: 3px;
-    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10; /* Ensure arrows are above other content */
+
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.slide img {
-    width: 100%; /* Make images cover full width */
-    height: 100%; /* Maintain aspect ratio */
-    object-fit: fill;
+.next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Fading effect for slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
@@ -226,89 +207,36 @@ nav {
     }
 }
 
-.horizontal-line hr {
-    border: none; /* Remove default border */
-    height: 5px; /* Set the height of the line */
-    background-color: gold; /* Set the color of the line */
-    margin: 0;
+
+.banner-image {
+    width: 100%; /* Make the image cover the full width */
+    height: 100%; /* Make the image cover the full height */
+    object-fit: cover; /* Maintain aspect ratio while covering */
 }
 
-.main-content-area {
-    text-align: center;
-    justify-content: center; /* Center horizontally */
-    width: 70%;
-    margin: 0 auto; /* Center the section horizontally */
-    padding: 20px;
-
+.banner_aside {
+    background-color: #ffffff; /* Light background color */
+  
 }
 
-.button-container {
-    text-align: center; /* Center the button horizontally */
-    margin-top: 20px; /* Add some spacing above the button */
+
+
+.logo-image {
+    width: 300px; /* Set a width for the logo */
+    height: 300px; /* Maintain aspect ratio */
+    margin: 50px;
+    margin-right: 150px;
 }
 
-.square-button {
-    width: 120px; /* Set width of the square button */
-    background-color: gold; /* Set button background color */
-    border: none; /* Remove default border */
-    color: black; /* Set text color */
-    font-size: 16px; /* Set font size */
-    padding: 10px;
-    cursor: pointer; /* Change cursor to pointer on hover */
+.banner_aside h2 {
+    font-size: 24px; /* Adjust the font size for the title */
+    margin-bottom: 10px; /* Space between title and text */
 }
 
-.square-button:hover {
-    background-color: transparent; /* Change to a lighter yellow on hover */
-    color: gold;
-    box-shadow: 0 0 0 2px gold; /* Gold border effect using box-shadow */
+.banner_aside p {
+    font-size: 16px; /* Adjust the font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
 }
-
-.intro-section p{
-    font-size: 50px;
-    color: white;
-}
-
-.two-column-section {
-    color: white;
-    text-align: center;
-    display: flex; /* Use flexbox for the layout */
-    justify-content: center; /* Center the columns horizontally */
-    align-items: flex-start; /* Align items at the start vertically */
-    margin-top: 20px; /* Add margin above the section */
-    padding: 20px; /* Add padding for better spacing */
-    
-    margin-bottom: 30px;
-}
-
-.columns {
-    background: linear-gradient(180deg, #434343, #000000);
-    flex: 0 0 30%; /* Set the column width to 30% of the parent */
-    margin: 0 50px; /* Add some margin between columns */
-    padding: 10px; /* Add padding for content inside columns */
-    font-size: 20px;
-}
-
-.columns h2 {
-    margin-top: 0; /* Remove top margin from headings */
-}
-
-.yellow-button {
-    background-color: gold; /* Set button background color */
-    border-color: gold;
-    color: black; /* Text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Padding for better spacing */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 10px; /* Add some space above the buttons */
-    font-size: 16px; /* Font size for the button text */
-}
-
-.yellow-button:hover {
-    background-color: transparent; /* Change to a lighter yellow on hover */
-    color: gold;
-    box-shadow: 0 0 0 2px gold; /* Gold border effect using box-shadow */
-}
-
 
 .bottom-section {
     display: flex; /* Use Flexbox for layout */
@@ -354,33 +282,8 @@ nav {
 
 .column a:hover {
     text-decoration: underline; /* Underline on hover for links */
-    text-decoration-color: yellow; /* Change underline color to yellow */
 }
 
-
-/* Standard Styles for Info Columns */
-.info-columns {
-    display: flex; /* Use flexbox to align the columns */
-    justify-content: space-between; /* Space out the columns evenly */
-}
-
-.column {
-    flex: 1; /* Allow columns to grow and fill the space equally */
-    margin: 0 10px; /* Add some margin between columns */
-    text-align: center; /* Center the content of the column */
-}
-
-.column h3 {
-    text-align: center; /* Center the headings */
-}
-
-.column p {
-    text-align: left; /* Align the paragraphs to the left */
-    margin: 0 auto; /* Center the paragraph under the heading */
-    width: fit-content; /* Make the paragraph width fit the content */
-}
-
-/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     .bottom-section {
         flex-direction: column; /* Stack logo and columns on smaller screens */
@@ -397,15 +300,8 @@ nav {
 
     .column {
         margin: 10px 0; /* Add margin between the stacked columns */
-        flex: none; /* Disable flex-grow to avoid stretching */
-    }
-
-    .column p {
-        width: auto; /* Reset width for smaller screens */
     }
 }
-
-
 .red-banner {
     background-color: rgb(190, 6, 6); /* Set background color to red */
     color: white; /* Set text color to white */
@@ -425,16 +321,15 @@ nav {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    max-width: 25%;
+    width: 300px; /* Adjusted to make the modal smaller */
     border-radius: 8px; /* Optional: rounded corners */
 }
 
@@ -533,9 +428,12 @@ form input {
     margin-top: 10px;
 }
 
+.terms-container input[type="checkbox"] {
+    margin-right: 2px;
+}
+
 .terms-container label {
     font-size: 13px;
-    display: inline;
 }
 
 .terms-container a {
@@ -569,9 +467,8 @@ form input {
 }
 
 #redButton {
-    background-color: rgb(204, 0, 0);
+    background-color: red;
     text-align: center;
-    padding: 5px 8px;
     border-radius: 12px;
     color: white;
     border: none;
@@ -585,75 +482,115 @@ form input {
     
 
 }
-/* Project page */
-.project-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
-.project-flex-div {
-    margin: 60px;
-    padding: 10px;
-    background-color: lightgrey;
-    height: 400px;
-    width: 400px;
-}
 
-.project-flex-div:hover {
-    color: crimson;
-}
 
-/* About Us Page Styling */
-.about-us {
-    text-align: center;
+/* Main Content for Contact Us */
+.container {
+    max-width: 1200px;
     margin: 20px auto;
-    max-width: 1200px; /* Center content and limit width */
-}
-
-.card-container {
-    display: flex; /* Align cards in a single row */
-    justify-content: space-between; /* Space between cards */
-    gap: 20px; /* Add space between cards */
-    margin-bottom: 20px; /* Space below each card container */
-}
-
-.card {
-    background-color: #ffffff7e;
-    border: 5px solid #fffb00;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    flex: 1; /* Allow cards to grow and fill available space */
-    transition: transform 0.2s;
+    background-color: #fff;
 }
 
-.commitment-card {
-    flex-basis: 100%; /* Make the commitment card take full width */
+main {
+    display: flex;
+    justify-content: space-between;
 }
 
-.card h2 {
-    color: #000000;
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
 }
 
-.card p {
-    color: #ffffff;
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 800px) {
-    .card {
-        /* Allow cards to wrap on smaller screens */
-        flex: 1 1 45%; /* Allow two cards per row */
-    }
+/* Contact Form Styling */
+.contact-form-div {
+    flex: 2;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 500px) {
-    .card {
-        flex: 1 1 100%; /* Stack cards vertically on very small screens */
-    }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+.send-button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-button:hover {
+    background-color: #555;
+}
+
+.about-text-div {
+    margin: 100px;
+    padding: 100px;
+}
+
+
+.project-detail-div {
+    margin: 40px;
+    padding: 10px;
+    height: 250px;
+   
+    font-family:Helvetica;
+    border-style: solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+    
+}
+
+.project-detail-div-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    font-family:Helvetica;
+    
+}
+
+.project-detail-header {
+    
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px;
+    height: 2px;
+   
+    font-family:Helvetica;
 }

@@ -585,3 +585,19 @@ main {
     margin: 100px;
     padding: 100px;
 }
+
+
+.project-detail-div {
+    margin: 100px;
+    padding: 10px;
+    height: 700px;
+    width: 800px;
+    font-family:Helvetica
+    
+}
+
+.project-detail-div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
