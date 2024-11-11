@@ -601,3 +601,12 @@ main {
     font-size: large;
 }
 
+#cityName {
+    font-size: x-large;
+    font-weight: bold;
+    
+}
+
+.project-detail-header {
+    margin-bottom: 25px;
+}
