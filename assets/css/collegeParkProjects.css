@@ -594,3 +594,10 @@ main {
    
     font-family:Helvetica;
 }
+
+.project-Area {
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
