@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/collegeParkProjects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Community Connection</title>
+
+<body>
+
+    <!-- Thin Red Banner -->
+    <div class="red-banner">
+        <h1>UNIVERSITY OF MARYLAND</h1>
+    </div>
+
+    <div class="title">
+        <a href="index.html">
+            <img src="assets/icons/ccc-logo.png" alt="ccc-logo" class="title-logo"> <!-- Image for the title -->
+        </a>
+
+        <div class="nav-buttons">
+            <a href="javascript:void(0)" class="btn login" onclick="openModal('loginModal')">LOGIN</a>
+            <a href="javascript:void(0)" class="btn register" onclick="openModal('registerModal')">REGISTER</a>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="projects.html" class="dropbtn">Projects</a>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+
+<div class="horizontal-line">
+    <hr>
+</div>
+
+<!-- Tooltip element -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- Main container with two sections -->
+<div class="container">
+  <!-- SVG Container -->
+  <div class="svg-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+
+      <g id="Layer_3" data-name="Layer 3">
+        <polygon class="shape0 pgshape" points="53.11 12.18 676.09 12.18 676.09 581 47.82 581 53.11 12.18" data-tooltip="PG County" data-shape-id="0"/>
+      </g>
+
+      <g id="Layer_2" data-name="Layer 2">
+        <!-- Shape 1 -->
+        <polygon class="shape shape-1" points="106.31 455.09 122.92 468.84 137.85 467.53 140.92 486.18 155.19 497.16 164.85 495.4 188.56 502.65 220.6 525.92 255.51 507.48 255.51 499.35 241.46 479.16 257.26 453.26 244.09 453.26 246.07 432.84 231.36 430.87 230.92 397.94 202.6 393.99 184.17 341.97 169.02 284.45 132.58 289.5 138.95 306.62 121.82 318.92 121.6 333.18 136.09 328.79 138.07 335.16 149.04 330.33 151.46 333.4 153.43 339.11 162.21 349.65 166.82 347.45 174.07 353.6 176.7 369.84 150.8 371.38 142.46 375.77 138.73 388.94 127.53 388.5 125.56 385.21 122.92 387.4 108.21 384.11 106.24 389.6 95.26 396.84 93.51 403.43 114.8 404.09 114.8 411.99 102.95 415.72 92.19 420.99 86.26 431.75 77.26 452.82 106.31 455.09" data-tooltip="Hyattsville" data-shape-id="1"/>
+        
+        <!-- Shape 2 -->
+        <polygon class="shape shape-2" points="207.21 388.14 234.43 392.53 245.26 398.38 251.12 332.97 241.17 328.43 223.46 311.89 208.97 306.33 194.92 290.5 174.43 286.57 192.29 350.53 207.21 388.14" data-tooltip="University Park" data-shape-id="2"/>
+        
+        <!-- Shape 3 -->
+        <path class="shape shape-3" d="M235.75,425.82v-25.46l12.95,5.93,4.83-39.29,34.46,1.76s1.98-6.59,5.93-5.93,7.46,4.17,7.46,4.17l20.41,2.63,3.95-3.07v-17.78l23.49-8.34,18.44,3.51-8.34,16.24,46.98,3.51,37.76-3.73,23.27,1.76-8.12,36.66-15.37-2.85-6.15-8.12-24.59-1.76-17.78-8.34-18-.66-10.98,11.63-16.9,5.71-8.56,51.37-13.17,25.24,9.66-25.46-26.12-4.83-16.46,39.73-12.73-7.02-21.29-24.37-12.73-.44,1.98-15.8-.22-5.05-14.05-1.54Z" data-tooltip="Riverdale Park" data-shape-id="3"/>
+        
+        <!-- Shape 4 -->
+        <polygon class="shape shape-4" points="253.24 358.87 284.41 362.38 293.19 356.23 300.65 356.23 304.6 362.38 317.34 362.38 319.97 350.97 322.17 342.48 348.07 336.04 367.82 336.04 390.65 290.5 351.54 277.65 344.12 252.62 324.8 244.28 355.7 164.38 390.65 99.4 388.46 59.45 334.02 75.26 302.85 28.72 267.73 91.5 272.12 166.58 253.24 208.28 217.24 111.26 195.29 125.75 170.26 173.6 140.41 163.06 123.29 179.75 158.85 227.16 170.7 278.09 199.24 284.45 212.78 301.79 227.34 307.06 245.34 324.62 256.97 328.14 253.24 358.87" data-tooltip="College Park" data-shape-id="4"/>
+        
+        <!-- Shape 5 -->
+        <polygon class="shape shape-5" points="332.7 241.36 346.46 199.79 363.43 199.79 374.26 186.92 381.29 188.97 375.14 200.67 431.34 214.14 408.51 246.33 393.29 281.75 355.7 271.79 349.68 248.67 332.7 241.36" data-tooltip="Berwyn Heights" data-shape-id="5"/>
+        
+        <!-- Shape 6 -->
+        <polygon class="shape shape-6" points="348.73 192.77 396.36 101.23 406.9 101.23 422.26 114.19 429.51 113.75 436.31 108.26 451.02 109.79 455.63 103.65 477.8 122.75 488.12 123.19 489.65 128.23 541.68 118.14 551.34 101.23 630.14 101.23 612.58 154.14 618.07 158.75 615.65 238.21 623.99 238.21 627.07 245.01 623.12 266.09 616.97 266.09 615.87 272.01 600.95 272.01 603.36 308.01 580.53 314.6 574.16 308.23 566.48 311.75 533.77 262.57 529.82 263.67 523.24 300.11 488.56 353.89 478.24 357.18 438.51 355.21 400.53 358.94 367.17 356.31 397.02 287.6 409.31 257.75 441.14 212.75 382.02 199.14 387.36 186.92 372.21 180.48 360.8 193.87 348.73 192.77" data-tooltip="Greenbelt" data-shape-id="6"/>
+        
+        <!-- Shape 7 -->
+        <polygon class="shape shape-7" points="465.51 396.7 473.41 362.38 490.97 358.94 528.73 301.43 533.56 274.21 580.09 340.43 593.7 367.28 593.7 389.23 603.36 387.92 607.31 396.7 614.77 396.7 617.41 400.65 610.82 404.6 612.88 413.25 607.88 416.94 601.91 414.6 603.4 426.72 596.84 429.85 600.49 444.06 585.83 446.4 573.97 426.83 573.97 414.6 577.06 407.13 570.75 402.4 571.28 400.48 565.8 397.92 563.62 392.86 556.88 395.43 550.83 393.89 541.61 395.67 535.28 400.4 523.71 389.23 522.72 380.2 510.79 376.94 502.1 376.94 491.96 381.99 474.64 385.47 467.73 393.57 465.51 396.7" data-tooltip="New Carrollton" data-shape-id="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Right Content Area with Cards -->
+  <div class="content">
+    <div class="card" id="card-0">
+      <h3>Card for Shape 0</h3>
+      <p>Details about Shape 0...</p>
+    </div>
+    <div class="card" id="card-1">
+      <h3>Hyattsville</h3>
+      <p>Details about Hyattsville.</p>
+    </div>
+    <div class="card" id="card-2">
+      <h3>Card for Shape 2</h3>
+      <p>Details about Shape 2...</p>
+    </div>
+    <div class="card" id="card-3">
+      <h3>Card for Shape 3</h3>
+      <p>Details about Shape 3...</p>
+    </div>
+    <div class="card" id="card-4">
+      <h3>Card for Shape 4</h3>
+      <p>Details about Shape 4...</p>
+    </div>
+    <div class="card" id="card-5">
+      <h3>Card for Shape 5</h3>
+      <p>Details about Shape 5...</p>
+    </div>
+    <div class="card" id="card-6">
+      <h3>Card for Shape 6</h3>
+      <p>Details about Shape 6...</p>
+    </div>
+    <div class="card" id="card-7">
+      <h3>Card for Shape 7</h3>
+      <p>Details about Shape 7...</p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Link to the external JS file -->
+<script src="script.js"></script>
+
+
+
+
+
+</html>

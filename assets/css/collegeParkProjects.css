@@ -1,4 +1,11 @@
 /* Reset margin and padding for the body and html elements */
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #000000; /* Fallback color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
 
 
 
@@ -20,7 +27,7 @@
 
 /* General Navbar Styling */
 nav {
-    background-color: #333; /* Dark background color for the navbar */
+    background: linear-gradient(180deg, #000000, #626262);
     padding: 5px 0; /* Padding around the navbar */
 }
 
@@ -54,8 +61,8 @@ nav {
     left: 50%; /* Start at the middle of the link */
     bottom: 0; /* Place at the bottom of the link */
     width: 0; /* Initial width is 0 */
-    height: 2px; /* Height of the underline */
-    background-color: #ffffff; /* Color of the underline */
+    height: 3px; /* Height of the underline */
+    background-color: gold; /* Color of the underline */
     transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
     transform-origin: center; /* Set origin for the width expansion */
 }
@@ -63,6 +70,13 @@ nav {
 .navbar a:hover::after {
     width: 100%; /* Expand the underline to full width */
     left: 0; /* Adjust to start from the beginning */
+}
+
+.horizontal-line hr {
+    border: none; /* Remove default border */
+    height: 5px; /* Set the height of the line */
+    background-color: gold; /* Set the color of the line */
+    margin: 0;
 }
 
 /* Dropdown Styling */
@@ -610,3 +624,116 @@ main {
 .project-detail-header {
     margin-bottom: 25px;
 }
+
+
+/* Project Map Styling */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* Container for the entire page content */
+.container {
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-start;  /* Aligns children (SVG and content) to the left */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* SVG Container */
+.svg-container {
+    margin-left: 20px;
+    width: 800px; /* Adjust width of SVG container */
+    height: 100%; /* Takes full available height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  /* Tooltip styles */
+  .tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    pointer-events: none;
+    white-space: nowrap;
+    display: none; /* Hidden by default */
+    z-index: 10;
+  }
+
+  .pgshape {
+    fill: transparent;
+    fill-opacity: 0.5; /* Initially dim the shapes */
+    stroke-opacity: 0.5; /* Dim the strokes as well */
+    stroke: #f7ff00;
+    stroke-width: 5px;
+  }
+
+  .pgshape:hover {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+/* Set initial transparency and transition for shapes */
+.shape {
+    fill: transparent;
+    fill-opacity: 0.5; /* Initially dim the shapes */
+    stroke-opacity: 0.5; /* Dim the strokes as well */
+    stroke: #f7ff00;
+    stroke-width: 5px;
+    transition: fill-opacity 0.3s ease, stroke-opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+  }
+  
+  /* Hover effect for 100% opacity */
+  .shape:hover {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  /* Styling for the active shape */
+  .shape.active {
+    fill-opacity: 1 !important; /* Active shape is fully visible */
+    stroke-opacity: 1 !important; /* Make the stroke fully visible */
+    transform: scale(1.05); /* Slightly enlarge the active shape */
+    fill: #be0606
+   
+  }
+  
+  /* Styling for inactive shapes (dimmed effect) */
+  .shape.inactive {
+    fill-opacity: 0.3 !important; /* Make inactive shapes even more transparent */
+    stroke-opacity: 0.3 !important; /* Dim the stroke */
+    pointer-events: none; /* Disable interaction with inactive shapes */
+  }
+
+  
+
+  /* Styling for the cards */
+.card {
+    display: none; /* Hide all cards by default */
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
+  /* Active card visibility */
+  .card.active {
+    display: block;
+  }
+  
+ 
