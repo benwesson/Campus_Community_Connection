@@ -7,18 +7,21 @@ function plusSlides(n) {
 
 function showSlides(n) {
     let slides = document.querySelectorAll('.slide');
-    if (n >= slides.length) { slideIndex = 0 }
-    if (n < 0) { slideIndex = slides.length - 1 }
+
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove('active'); // Hide all slides
     }
-    slides[slideIndex].style.display = "block";
+
+    slides[slideIndex].classList.add('active'); // Show the active slide
 }
 
-// Automatically change slides every 3 seconds
+// Automatically change slides every 5 seconds
 setInterval(function() {
     plusSlides(1);
-}, 3000);
+}, 5000);
 
 // Open the modal
 function openModal(modalId) {

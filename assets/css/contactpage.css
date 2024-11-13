@@ -17,6 +17,12 @@ html, body {
     padding: 10px 10px; /* Add padding for better spacing */
 }
 
+.title-logo {
+    max-width: 400px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the logo and title */
+}
+
 /* General Navbar Styling */
 nav {
     background-color: #333; /* Dark background color for the navbar */
@@ -573,4 +579,25 @@ main {
 
 .send-button:hover {
     background-color: #555;
+}
+
+.about-text-div {
+    margin: 100px;
+    padding: 100px;
+}
+
+
+.project-detail-div {
+    margin: 100px;
+    padding: 10px;
+    height: 700px;
+    width: 800px;
+    font-family:Helvetica
+    
+}
+
+.project-detail-div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

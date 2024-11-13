@@ -2,18 +2,24 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="assets/css/contactpage.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Community Connection</title>
- 
-   
 </head>
 
 <body>
     <script>
-        function contactButton() {
-            location.replace("contact.html")
+        function communityButton() {
+            location.replace("Jurisdictions.html")
+        }
+
+        function seeProjectsButton() {
+            location.replace("seeProjects.html")
+        }
+
+        function joinButton() {
+            location.replace("join.html")
         }
     </script>
 
@@ -23,15 +29,14 @@
     </div>
 
     <div class="title">
-        <a href="index.html">
-            <img src="assets/icons/ccc-logo.png" alt="ccc-logo" class="title-logo"> <!-- Image for the title -->
-        </a>
+        <h1>Campus Community Connection</h1>
 
         <div class="nav-buttons">
             <a href="javascript:void(0)" class="btn login" onclick="openModal('loginModal')">LOGIN</a>
             <a href="javascript:void(0)" class="btn register" onclick="openModal('registerModal')">REGISTER</a>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav>
         <ul class="navbar">
@@ -50,34 +55,75 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-    
-       <!-- Main Content for Contact Us Page -->
-       <div class="container">
-        <main>
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Interested in joining any of our ongoing or future projects? Contact us today to become a part of the Campus Community Connection! 
-                    We strive to create a better and more active community by bringing people together to work on community projects. All projects are volunteer-based.
-                    For more information complete the following form :</p>
-                <p><span>&#9993;</span> afellows@umd.edu</p>
-                <p><span>&#127970;</span> 4161 Fieldhouse Dr #1109d, Patuxent Building, College Park, MD 20742</p>
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <!-- First Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/banner.jpeg" alt="Slide 1">
             </div>
-            <div class="contact-form-div">
-                <form class = "contact-form" action="#" method="post">
-                    <div class="contact-form-row">
-                        <input class = "contact-input" type="text" placeholder="First Name">
-                        <input class = "contact-input"type="text" placeholder="Last Name">
-                        
-                    </div>
+            <!-- Second Slide -->
+            <div class="slide fade">
+                <img src="/assets/images/CCC_project_image.jpg" alt="Slide 2">
+            </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Aside for title and text -->
+    <aside class="banner_aside">
+        <div class="aside_content">
+            <div class="text-content">
+                <h1>Campus Community Connection</h1>
+
+                <p>The Campus Community Connection encourages students and faculty at the University of Maryland to
+                    explore community-based projects with local government jurisdictions.
+                    Project goals are aimed at greater sustainability and resiliency for the University and its
+                    surrounding community, strengthening ties between the campus and its neighbors,
+                    and fulfilling academic objectives while providing real-world experience and visible results for
+                    participants.</p>
+
+                <p>Participating communities include Prince George’s County, the City of College Park, the City of
+                    Hyattsville, the Town of Riverdale Park and the Town of University Park.
+                    These jurisdictions have identified 80 projects to collaboratively achieve with the University.</p>
+            </div>
+            <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+        </div>
+
+    </aside>
+
+    <div class = "project-flex">
+        <!-- 1 -->
+        <div class = "project-flex-div">
+            <h2>The Community</h2>
+            <p class = ".project-flex-div-p">
+                Learn about the jurisdictions the Campus Community Connection is working with.
+            </p>
+            <button id ="redButton" onclick = "communityButton()">Contact Us</button>
+        </div>
+
+        <!-- 2 -->    
+        <div class = "project-flex-div">
+            <h2>See All Projects</h2>
+            <p class = ".project-flex-div-p">
+                See all of the projects that UMD students are apart of.
+            </p>
+            <button id ="redButton" onclick = "seeProjectsButton()">Contact Us</button>
+        </div>
+            
         
-                    <input class = "contact-input" type="text" placeholder="Email">
-                    <input class = "contact-input" type="text" placeholder="phone">
-                    <input class = "contact-input" type="text" placeholder="Subject">
-                    <textarea placeholder="Message"></textarea>
-                    <button class ="send-button" type="submit">SEND</button>
-                </form>
-            </div>
-        </main>
+
+        <!-- 3 -->  
+        <div class = "project-flex-div">
+            <h2>Join a Project</h2>
+            <p class = ".project-flex-div-p">
+                Learn about the opportunities for you to connect to the communites around UMD.
+            </p>
+            <button id ="redButton" onclick = "joinButton()">Contact Us</button>
+        </div>
+        
     </div>
 
     <!-- Bottom Section -->

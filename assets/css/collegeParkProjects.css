@@ -1,63 +1,21 @@
-/* Parallax CSS */
-
-
-.outer-Space {
-    text-align: center;
-    font-size: 300%;
-    color: #4a4444; 
-    text-transform: uppercase;
-    letter-spacing: 1%;
-    margin: 10% 0;
-}
-
-.inner-Space {
-    text-align: center;
-    font-size: 275%;
-    color: #E5E5E5; 
-    text-transform: uppercase;
-    letter-spacing: 1%;
-    
-}
-
-.parallax {
-    background: url(terpimage1.jpg)  fixed 100%;
-    background-size: 130%;
-}
-
-.project-Jurisdiction-Flex {
-    display: flex;
-    
-}
-
-.project-Jurisdiction-Flex-Div {
-    margin: 60px;
-    padding: 10px;
-    width: 500px;
-    color: white;
-    font-family: Helvetica;
-    text-align: center;
-}
-
-
-
-/* normal  CSS*/
 /* Reset margin and padding for the body and html elements */
-html, body {
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
-}
+
 
 
 .title {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000000;
-    color: hsl(62, 100%, 50%);
+    color: #f9f9f9;
     display: flex; /* Enable flexbox */
     justify-content: space-between; /* Space out the title and buttons */
     align-items: center; /* Center vertically */
     padding: 10px 10px; /* Add padding for better spacing */
+}
+
+.title-logo {
+    max-width: 400px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the logo and title */
 }
 
 /* General Navbar Styling */
@@ -97,7 +55,7 @@ nav {
     bottom: 0; /* Place at the bottom of the link */
     width: 0; /* Initial width is 0 */
     height: 2px; /* Height of the underline */
-    background-color: #e2e600; /* Color of the underline */
+    background-color: #ffffff; /* Color of the underline */
     transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
     transform-origin: center; /* Set origin for the width expansion */
 }
@@ -130,6 +88,10 @@ nav {
     padding: 12px 16px; /* Padding for dropdown links */
     text-decoration: none; /* Remove underline */
     display: block; /* Block display to ensure full width is clickable */
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Darker background on hover */
 }
 
 /* Show the dropdown on hover */
@@ -180,16 +142,14 @@ nav {
 /* Image Slider Styling */
 .slider {
     position: relative;
-    max-width: 100%; /* Full-width slider */
-    height: 500px; /* Set desired fixed height for the slider */
+    max-width: 80%; /* Full-width slider */
+    margin: 20px auto; /* Center the slider */
     overflow: hidden; /* Hide overflow */
+    padding: 20px;
 }
 
 .slides {
     display: flex;
-    position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 .slide {
@@ -197,39 +157,41 @@ nav {
     width: 100%;
 }
 
-.slide.active {
-    display: block; /* Display only the active slide */
-    opacity: 1; /* Make active slide fully visible */
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 2rem;
-    color: rgb(180, 180, 180);
-    cursor: pointer;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-    border-radius: 3px;
-    transform: translateY(-50%);
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
 .slide img {
     width: 100%; /* Make images cover full width */
-    height: 100%; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
-.slide.active img {
-    transform: scale(1.1); /* Zoom effect on active slide (10% increase) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10; /* Ensure arrows are above other content */
+
 }
 
+.next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+}
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading effect for slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
 @keyframes fade {
@@ -257,25 +219,7 @@ nav {
   
 }
 
-.aside_content {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space out the text and logo */
-    align-items: center; /* Center content vertically */
-    padding: 20px; /* Add some padding around the text */
 
-}
-
-.text-content {
-    margin-left: 100px;
-    padding: 50px;
-    margin-top: 0px;
-    padding-top: 0px;
-    font-size: 20px;
-}
-
-.text-content h1{
-    font-size: 40px;
-}
 
 .logo-image {
     width: 300px; /* Set a width for the logo */
@@ -523,9 +467,8 @@ form input {
 }
 
 #redButton {
-    background-color: rgb(204, 0, 0);
+    background-color: red;
     text-align: center;
-    padding: 5px 8px;
     border-radius: 12px;
     color: white;
     border: none;
@@ -539,99 +482,131 @@ form input {
     
 
 }
-/* Project page */
-.project-flex {
+
+
+
+/* Main Content for Contact Us */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.project-flex-div {
-    margin: 100px;
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Contact Form Styling */
+.contact-form-div {
+    flex: 2;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-input, textarea {
+    width: 100%;
     padding: 10px;
-    height: 400px;
-    width: 250px;
-    font-family:Helvetica
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.project-flex-div:hover {
-    color: crimson;
+.contact-input::placeholder, textarea::placeholder {
+    color: #666;
 }
 
-#yellowButton {
-    background-color: #ffd200;
-    border-color: #ffd200;
+.send-button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-button:hover {
+    background-color: #555;
+}
+
+.about-text-div {
+    margin: 100px;
+    padding: 100px;
+}
+
+
+.project-detail-div {
+    margin: 40px;
+    padding: 10px;
+    height: 250px;
+   
+    font-family:Helvetica;
     border-style: solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+    
+}
+
+.project-detail-div-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
     padding: 10px;
     font-family:Helvetica;
-    font-weight: bolder;
-    width: 225px;
-    
-    
     
 }
 
-#yellowButton:hover {
-    background-color: transparent;
-    color: #ffd200;
+.project-detail-header {
     
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px;
+    height: 2px;
+   
+    font-family:Helvetica;
+}
+
+.project-Area {
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
+#cityName {
+    font-size: x-large;
+    font-weight: bold;
     
 }
 
-.horizontal-line hr {
-    border: none; /* Remove default border */
-    height: 5px; /* Set the height of the line */
-    
-    margin: 0;
+.project-detail-header {
+    margin-bottom: 25px;
 }
-
-.title-logo {
-    max-width: 400px; /* Set a maximum width for the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between the logo and title */
-}
-
-.image-zoom {
-    padding: 50px;
-    background-image: url("terpstudents.jpg");
-    background-size: 108%;
-    transition: transform .2s; /* Animation */
-    width: 250px;
-    height: 150px;
-    margin: 0 auto;
-  }
-
-  .image-zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-
-  .image-zoom2 {
-    padding: 50px;
-    background-image: url("pjc.jpg");
-    background-size: 125%;
-    transition: transform .2s; /* Animation */
-    width: 250px;
-    height: 150px;
-    margin: 0 auto;
-  }
-
-  .image-zoom2:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-
-
-  .image-zoom3 {
-    padding: 50px;
-    background-image: url("mall.jpg");
-    background-size: 125%;
-    transition: transform .2s; /* Animation */
-    width: 250px;
-    height: 150px;
-    margin: 0 auto;
-  }
-
-  .image-zoom3:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-
-
