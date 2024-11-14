@@ -627,28 +627,21 @@ main {
 
 
 /* Project Map Styling */
-h1 {
-    text-align: center;
-    margin: 20px 0;
-  }
 
   /* Container for the entire page content */
 .container {
     background-color: #000000;
     display: flex;
-    justify-content: flex-start;  /* Aligns children (SVG and content) to the left */
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Full viewport height */
   }
   
   /* SVG Container */
 .svg-container {
-    margin-left: 20px;
     width: 800px; /* Adjust width of SVG container */
     height: 100%; /* Takes full available height */
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   
@@ -695,6 +688,7 @@ h1 {
     fill-opacity: 1;
     stroke-opacity: 1;
     cursor: pointer; /* Change cursor on hover */
+    fill: #f7ff00 ;
   }
   
   /* Styling for the active shape */
@@ -718,8 +712,8 @@ h1 {
   /* Styling for the cards */
 .card {
     display: none; /* Hide all cards by default */
-    background-color: #2e2e2e;
-    color: white;
+    background-color: #d8df00;
+    color: rgb(0, 0, 0);
     padding: 20px;
     margin: 15px;
     border-radius: 8px;
@@ -729,6 +723,7 @@ h1 {
   
   .card h3 {
     margin-top: 0;
+    color: red
   }
   
   /* Active card visibility */
