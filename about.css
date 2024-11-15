@@ -1,7 +1,7 @@
 /* Reset margin and padding for the body and html elements */
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: white; /* Fallback color */
+    background-color: rgb(0, 0, 0); /* Fallback color */
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
@@ -26,7 +26,7 @@ html, body {
 
 /* General Navbar Styling */
 nav {
-    background-color: #333; /* Dark background color for the navbar */
+    background: linear-gradient(180deg, #000000, #626262);
     padding: 5px 0; /* Padding around the navbar */
 }
 
@@ -60,8 +60,8 @@ nav {
     left: 50%; /* Start at the middle of the link */
     bottom: 0; /* Place at the bottom of the link */
     width: 0; /* Initial width is 0 */
-    height: 2px; /* Height of the underline */
-    background-color: #e2e600; /* Color of the underline */
+    height: 3px; /* Height of the underline */
+    background-color: gold; /* Color of the underline */
     transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and position */
     transform-origin: center; /* Set origin for the width expansion */
 }
@@ -71,47 +71,6 @@ nav {
     left: 0; /* Adjust to start from the beginning */
 }
 
-/* Dropdown Styling */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    cursor: pointer; /* Show pointer when hovering over dropdown */
-}
-
-.dropdown-content {
-    display: none; /* Hide the dropdown by default */
-    position: absolute; /* Position it below the parent */
-    background-color: #333; /* Same background color as navbar */
-    min-width: 160px; /* Set a minimum width */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for dropdown */
-    z-index: 1; /* Ensure dropdown is above other elements */
-}
-
-.dropdown-content a {
-    color: white; /* White text for dropdown links */
-    padding: 12px 16px; /* Padding for dropdown links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Block display to ensure full width is clickable */
-}
-
-/* Show the dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown content on hover */
-}
-
-/* Responsive Adjustments (optional) */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack the navbar items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .dropdown-content {
-        position: static; /* Position dropdown normally in mobile view */
-    }
-}
 
 .btn {
     color: #ffffff; /* Button text color */
@@ -141,168 +100,12 @@ nav {
 }
 
 
-/* Image Slider Styling */
-.slider {
-    position: relative;
-    width: 100%; /* Full-width slider */
-    height: 500px; /* Set desired fixed height for the slider */
-    overflow: hidden; /* Hide overflow */
-}
-
-@media screen and (max-width: 1200px) {
-    .slider {
-        height: 400px; /* Smaller height for medium screens */
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .slider {
-        height: 300px; /* Smaller height for smaller screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .slider {
-        height: 250px; /* Height adjustment for tablets */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .slider {
-        height: 200px; /* Smaller height for mobile screens */
-    }
-}
-
-
-.slides {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    display: none; /* Hide all slides by default */
-    width: 100%;
-}
-
-.slide.active {
-    display: block; /* Display only the active slide */
-    opacity: 1; /* Make active slide fully visible */
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 2rem;
-    color: rgb(180, 180, 180);
-    cursor: pointer;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-    border-radius: 3px;
-    transform: translateY(-50%);
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.slide img {
-    width: 100%; /* Make images cover full width */
-    height: 100%; /* Maintain aspect ratio */
-    object-fit: cover;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    .prev, .next {
-        font-size: 12px;
-        padding: 10px;
-    }
-}
-
 .horizontal-line hr {
     border: none; /* Remove default border */
     height: 5px; /* Set the height of the line */
-    background-color: yellow; /* Set the color of the line */
+    background-color: gold; /* Set the color of the line */
     margin: 0;
 }
-
-.main-content-area {
-    text-align: center;
-    justify-content: center; /* Center horizontally */
-    width: 70%;
-    margin: 0 auto; /* Center the section horizontally */
-    padding: 20px;
-
-}
-
-.button-container {
-    text-align: center; /* Center the button horizontally */
-    margin-top: 20px; /* Add some spacing above the button */
-}
-
-.square-button {
-    width: 120px; /* Set width of the square button */
-    background-color: rgb(209, 209, 3); /* Set button background color */
-    border: none; /* Remove default border */
-    color: black; /* Set text color */
-    font-size: 16px; /* Set font size */
-    padding: 10px;
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Add transition effect */
-}
-
-.square-button:hover {
-    background-color: gold; /* Change to a lighter yellow on hover */
-}
-
-.intro-section p{
-    font-size: 50px;
-    color: white;
-}
-
-.two-column-section {
-    color: white;
-    text-align: center;
-    display: flex; /* Use flexbox for the layout */
-    justify-content: center; /* Center the columns horizontally */
-    align-items: flex-start; /* Align items at the start vertically */
-    margin-top: 20px; /* Add margin above the section */
-    padding: 20px; /* Add padding for better spacing */
-    
-}
-
-.columns {
-    background: linear-gradient(180deg, #434343, #000000);
-    flex: 0 0 30%; /* Set the column width to 30% of the parent */
-    margin: 0 50px; /* Add some margin between columns */
-    padding: 10px; /* Add padding for content inside columns */
-    font-size: 20px;
-}
-
-.columns h2 {
-    margin-top: 0; /* Remove top margin from headings */
-}
-
-.yellow-button {
-    background-color: rgb(209, 209, 3); /* Set button background color */
-    color: black; /* Text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Padding for better spacing */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 10px; /* Add some space above the buttons */
-    font-size: 16px; /* Font size for the button text */
-}
-
-.yellow-button:hover {
-    background-color: gold; /* Change to a lighter yellow on hover */
-}
-
 
 .bottom-section {
     display: flex; /* Use Flexbox for layout */
@@ -564,38 +367,62 @@ form input {
     text-decoration: underline;
 }
 
-#redButton {
-    background-color: rgb(204, 0, 0);
+/* About Us Page Styling */
+.about-us {
     text-align: center;
-    padding: 5px 8px;
-    border-radius: 12px;
-    color: white;
-    border: none;
-    font-size: 24px;
-    transition-duration: 0.4s;
+    margin: 20px auto;
+    max-width: 1200px; /* Center content and limit width */
 }
 
-#redButton:hover{
-    background-color: darkred;
-    color: white;
-    
-
-}
-/* Project page */
-.project-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.card-container {
+    display: flex; /* Align cards in a single row */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Add space between cards */
+    margin-bottom: 20px; /* Space below each card container */
 }
 
-.project-flex-div {
-    margin: 60px;
-    padding: 10px;
-    background-color: lightgrey;
-    height: 400px;
-    width: 400px;
+.card {
+    background-color: #ffffff7e;
+    border: 5px solid gold;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1; /* Allow cards to grow and fill available space */
+    transition: transform 0.2s;
 }
 
-.project-flex-div:hover {
-    color: crimson;
+.commitment-card {
+    flex-basis: 100%; /* Make the commitment card take full width */
+}
+
+.card img {
+    width: 70%;
+}
+
+.card h2 {
+    color: #000000;
+    font-size: 30px;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .card {
+        /* Allow cards to wrap on smaller screens */
+        flex: 1 1 45%; /* Allow two cards per row */
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex: 1 1 100%; /* Stack cards vertically on very small screens */
+    }
 }
