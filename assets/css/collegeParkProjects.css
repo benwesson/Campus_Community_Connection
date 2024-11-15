@@ -628,25 +628,107 @@ main {
 
 /* Project Map Styling */
 
-  /* Container for the entire page content */
+/* Main container for layout */
+.main-container {
+    background-color: transparent;
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Left side: SVG container */
+.svg-container {
+    flex: 1; /* Takes up 50% of the width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Optional padding */
+}
+
+
 .container {
-    background-color: #000000;
+    background-color: transparent;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents overflow from affecting layout */
+}
+  
+/* Styling for SVG itself */
+.svg-container svg {
+    width: 100%;
+    height: auto; /* Responsive height */
+    max-height: 100%; /* Restrict SVG from exceeding container height */
+}
+
+/* Right side: Card container */
+.card-container {
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto; /* Enables scrolling for overflow content */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+/* Right Content Area for Cards */
+/* Content (Cards) on the Right */
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Styling for individual cards */
+
+.card {
+    width: 90%;
+    max-width: 600px;
+    background-color: #d8df00;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    pointer-events: none; /* Prevent interaction when not visible */
+}
+  
+  .card h3 {
+    margin-top: 0;
+    color: red;
+    text-align: center;
   }
   
-  /* SVG Container */
-.svg-container {
-    width: 800px; /* Adjust width of SVG container */
-    height: 100%; /* Takes full available height */
-    display: flex;
-    justify-content: center;
+  /* Active card visibility */
+  .card.active {
+    display: block;
   }
 
+  /* Container for button alignment at the bottom of the card */
+.card-footer {
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    margin-top: auto; /* Pushes footer to the bottom of the card */
+}
   
-  /* Tooltip styles */
-  .tooltip {
+ .see-projects-btn {
+    float: right;
+    padding: 10px;
+ }
+
+ /* Styling for the See Projects link as a button */
+.see-projects-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensures it behaves like a button */
+}
+
+ /* SVG MAP STYLES */
+ .tooltip {
     position: absolute;
     padding: 5px 10px;
     background-color: rgba(0, 0, 0, 0.75);
@@ -706,53 +788,3 @@ main {
     stroke-opacity: 0.3 !important; /* Dim the stroke */
     pointer-events: none; /* Disable interaction with inactive shapes */
   }
-
-  
-
-  /* Styling for the cards */
-.card {
-    display: none; /* Hide all cards by default */
-    background-color: #d8df00;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    
-  }
-  
-  .card h3 {
-    margin-top: 0;
-    color: red;
-    text-align: center;
-  }
-  
-  /* Active card visibility */
-  .card.active {
-    display: block;
-  }
-
-  /* Container for button alignment at the bottom of the card */
-.card-footer {
-    display: flex;
-    justify-content: flex-end; /* Aligns button to the right */
-    margin-top: auto; /* Pushes footer to the bottom of the card */
-}
-  
- .see-projects-btn {
-    float: right;
-    padding: 10px;
- }
-
- /* Styling for the See Projects link as a button */
-.see-projects-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensures it behaves like a button */
-}
