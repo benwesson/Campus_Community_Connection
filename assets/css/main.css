@@ -255,6 +255,7 @@ nav {
     font-size: 16px; /* Set font size */
     padding: 10px;
     cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none;
 }
 
 .square-button:hover {
