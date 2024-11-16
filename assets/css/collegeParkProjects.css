@@ -1,7 +1,7 @@
 /* Reset margin and padding for the body and html elements */
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #000000; /* Fallback color */
+    background-color:  white; /* Fallback color */
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
@@ -591,8 +591,9 @@ main {
 }
 
 .project-detail-div-flex {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 5px;
     padding: 10px;
     font-family:Helvetica;
