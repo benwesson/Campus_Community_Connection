@@ -579,7 +579,10 @@ main {
 
 
 .project-detail-div {
-    margin: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     height: 600px;
     width: 500px;
     font-family:Helvetica;
@@ -592,16 +595,14 @@ main {
 .project-detail-div:hover {
     transform: scale(1.1);
     border-color: red;
-   
-    
 }
 
 .project-detail-div-flex {
     justify-content: center;
     display: flex;
     flex-direction: row;
-    margin: 5px;
-    padding: 10px;
+    margin: 10px;
+    padding: 20px;
     font-family:Helvetica;
     
 }
