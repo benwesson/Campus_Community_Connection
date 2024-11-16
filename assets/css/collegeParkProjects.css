@@ -580,13 +580,19 @@ main {
 
 .project-detail-div {
     margin: 40px;
-    padding: 10px;
-    height: 250px;
-   
+    height: 600px;
+    width: 500px;
     font-family:Helvetica;
     border-style: solid;
-    border-radius: 5px;
-    box-shadow: 5px 5px;
+    transition: transform .2s;
+    border-color: gray;
+    
+}
+
+.project-detail-div:hover {
+    transform: scale(1.1);
+    border-color: red;
+   
     
 }
 
@@ -600,8 +606,18 @@ main {
     
 }
 
+.project-detail-div-image {
+    height: 300px;
+    width: 500px;
+   
+    background: url(/terpimage1.jpg) 
+}
+
+.project-detail-div-text {
+    padding: 10px;
+}
+
 .project-detail-header {
-    
     margin-right: 40px;
     margin-left: 40px;
     padding: 10px;
@@ -789,3 +805,23 @@ main {
     stroke-opacity: 0.3 !important; /* Dim the stroke */
     pointer-events: none; /* Disable interaction with inactive shapes */
   }
+
+  #yellowButton {
+    background-color: #ffd200;
+    border-color: #ffd200;
+    border-style: solid;
+    padding: 10px;
+    font-family:Helvetica;
+    font-weight: bolder;
+    width: 225px;
+    
+    
+    
+}
+
+#yellowButton:hover {
+    background-color: transparent;
+    color: #ffd200;
+    
+    
+}
