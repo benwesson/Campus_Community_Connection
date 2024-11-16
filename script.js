@@ -52,20 +52,22 @@ shapes.forEach(function(shape) {
 
 // Reset to normal mode when clicking outside of the shapes
 document.addEventListener('click', function(event) {
-  // Check if the click is outside any shape
+  // Check if the click is outside any shape and not inside a card
   const isClickInsideShapes = event.target.closest('.shape, .pgshape');
-  
-  // If the click is outside the shapes, reset to normal mode
-  if (!isClickInsideShapes) {
+  const isClickInsideCard = event.target.closest('.card');
+
+  // If the click is outside the shapes and not inside a card, reset to normal mode
+  if (!isClickInsideShapes && !isClickInsideCard) {
     // Reset all shapes (remove active and inactive classes)
     shapes.forEach(function(s) {
       s.classList.remove('active');
       s.classList.remove('inactive');
     });
-    
+
     // Hide all cards
     document.querySelectorAll('.card').forEach(function(card) {
       card.classList.remove('active');
     });
   }
 });
+
