@@ -1,12 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="assets/css/collegeParkProjects.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/contactpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Community Connection</title>
+ 
+   
+</head>
 
 <body>
+    <script>
+        function contactButton() {
+            location.replace("contact.html")
+        }
+    </script>
 
     <!-- Thin Red Banner -->
     <div class="red-banner">
@@ -30,84 +40,109 @@
             <li><a href="about.html">About Us</a></li>
             <li class="dropdown">
                 <a href="projects.html" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="#">Project 1</a>
+                    <a href="#">Project 2</a>
+                    <a href="#">Project 3</a>
+                    <a href="#">Project 4</a>
+                    <!-- add more as needed -->
+                </div>
             </li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-</body>
+    
+       <!-- Main Content for Contact Us Page -->
+       <div class="container">
 
-<div class="horizontal-line">
-    <hr>
-</div>
-
-<!-- Main Content for Contact Us Page -->
-
-
-<div class="info-container">
-    <h2>Contact Us</h2>
-    <div class="content-wrapper">
-        <div class="contact-info">
-            <p>Interested in joining any of our ongoing or future projects? Contact us today to become a part of the Campus
-                Community Connection!
-                We strive to create a better and more active community by bringing people together to work on community
-                projects. All projects are volunteer-based.</p>
-                <p>For more information complete the following form:</p>
-        </div>
-        <div class="contact-form-div">
-            <form class="contact-form" action="#" method="post">
-                <div class="contact-form-row">
-                    <input class="contact-input" type="text" placeholder="First Name"required>
-                    <input class="contact-input" type="text" placeholder="Last Name"required>
+        <main>
+        <div class="form">
+            <div class="contact-info">
+              <h3 class="title">Contact Us</h3>
+              <p class="text">
+                Interested in joining any of our ongoing or future projects? Contact us today to become a part of the Campus Community Connection! We strive to create a better and more active community by bringing people together to work on community projects. All projects are volunteer-based. For more information complete the following form :
+              </p>
+    
+              <div class="info">
+                <div class="information">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p><span>&#127970;</span> 4161 Fieldhouse Dr #1109d, Patuxent Building, College Park, MD 20742
                 </div>
-                <input class="contact-input" type="text" placeholder="Email"required>
-                <input class="contact-input" type="text" placeholder="Phone">
-                <input class="contact-input" type="text" placeholder="Subject">
-                <textarea placeholder="Message"></textarea>
-                <button class="send-button" type="submit">SEND</button>
-            </form>
+                <div class="information">
+                  <i class="fas fa-envelope"></i>
+                  <span>&#9993;</span> afellows@umd.edu
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+    
+                <form
+                action="https://formspree.io/f/mvgoqgoy"
+                method="POST"
+              >
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                  <input type="firstName" name="firstName" class="input" />
+                  <label for="">Firstname</label>
+                  <span>Firstname</span>
+                </div>
+                <div class="input-container">
+                    <input type="lastName" name="lastName" class="input" />
+                    <label for="">Lastname</label>
+                    <span>Lastname</span>
+                  </div>
+                <div class="input-container">
+                  <input type="email" name="email" class="input" />
+                  <label for="">Email</label>
+                  <span>Email</span>
+                </div>
+                <div class="input-container">
+                  <input type="tel" name="phone" class="input" />
+                  <label for="">Phone</label>
+                  <span>Phone</span>
+                </div>
+                <div class="input-container">
+                    <input type="subject" name="subject" class="input" />
+                    <label for="">Subject</label>
+                    <span>Subject</span>
+                  </div>
+                <div class="input-container textarea">
+                  <textarea name="message" class="input"></textarea>
+                  <label for="">Message</label>
+                  <span>Message</span>
+                </div>
+                <input type="submit" value="Send" class="btn" />
+              </form>
+            </div>
+          </div>
+        </main>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <a href="https://ischool.umd.edu/">
+            <img src="assets/images/info-logo.png" alt="Info Logo" class="info-logo">
+        </a>
+
+        <!-- Columns for Address, Contact, and Pages -->
+        <div class="info-columns">
+            <div class="column">
+                <h3>Address</h3>
+                <p>University of Maryland<br>College Park, MD 20742</p>
+            </div>
+            <div class="column">
+                <h3>Contact</h3>
+                <p>Email: info@umd.edu<br>Phone: (301) 405-1000</p>
+            </div>
+            <div class="column">
+                <h3>Pages</h3>
+                <p><a href="index.html">Home</a><br><a href="about.html">About Us</a><br><a
+                        href="projects.html">Projects</a></p>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.0743067703504!2d-76.94460899233117!3d38.98864069919139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6982f6f1d79%3A0x70b284a36c753d0e!2sPatuxent%20Building%2C%204161%20Fieldhouse%20Dr%2C%20College%20Park%2C%20MD%2020742!5e0!3m2!1sen!2sus!4v1731893294998!5m2!1sen!2sus" 
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-
-
-
-<!-- Bottom Section -->
-<div class="bottom-section">
-    <a href="https://ischool.umd.edu/">
-        <img src="assets/images/info-logo.png" alt="Info Logo" class="info-logo">
-    </a>
-
-    <!-- Columns for Address, Contact, and Pages -->
-    <div class="info-columns">
-        <div class="column">
-            <h3>Address</h3>
-            <p>University of Maryland<br>College Park, MD 20742</p>
-        </div>
-        <div class="column">
-            <h3>Contact</h3>
-            <p>Email: info@umd.edu<br>Phone: (301) 405-1000</p>
-        </div>
-        <div class="column">
-            <h3>Pages</h3>
-            <p><a href="index.html">Home</a><br><a href="about.html">About Us</a><br><a
-                    href="projects.html">Projects</a></p>
-        </div>
-    </div>
-</div>
-
-<!-- Login Modal -->
+ <!-- Login Modal -->
 <div id="loginModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('loginModal')">&times;</span>
@@ -141,28 +176,46 @@
             <input type="email" id="register-email" name="email" placeholder="Email" required>
             <input type="text" id="register-username" name="username" placeholder="Username" required>
             <input type="password" id="register-password" name="password" placeholder="Password" required>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
-                required>
-
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            
             <!-- Terms and Conditions Checkbox -->
             <div class="terms-container">
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
             </div>
-
+            
             <button type="submit" class="btn submit">Register</button>
         </form>
 
         <!-- Already Have an Account -->
         <div class="signin-link">
-            <p>Already have an account? <a href="#" onclick="closeModal('registerModal'); openModal('loginModal');">Sign
-                    in!</a></p>
+            <p>Already have an account? <a href="#" onclick="closeModal('registerModal'); openModal('loginModal');">Sign in!</a></p>
         </div>
     </div>
 </div>
 
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const inputs = document.querySelectorAll(".input");
 
+        function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+        let parent = this.parentNode;
+        if (this.value == "") {
+            parent.classList.remove("focus");
+        }
+        }
+
+        inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+        });
+
+    </script>
 
 </body>
 
