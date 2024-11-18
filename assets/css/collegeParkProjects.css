@@ -79,39 +79,6 @@ nav {
     margin: 0;
 }
 
-/* Dropdown Styling */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    cursor: pointer; /* Show pointer when hovering over dropdown */
-}
-
-.dropdown-content {
-    display: none; /* Hide the dropdown by default */
-    position: absolute; /* Position it below the parent */
-    background-color: #333; /* Same background color as navbar */
-    min-width: 160px; /* Set a minimum width */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for dropdown */
-    z-index: 1; /* Ensure dropdown is above other elements */
-}
-
-.dropdown-content a {
-    color: white; /* White text for dropdown links */
-    padding: 12px 16px; /* Padding for dropdown links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Block display to ensure full width is clickable */
-}
-
-.dropdown-content a:hover {
-    background-color: #575757; /* Darker background on hover */
-}
-
-/* Show the dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown content on hover */
-}
 
 /* Responsive Adjustments (optional) */
 @media screen and (max-width: 768px) {
@@ -498,80 +465,6 @@ form input {
 }
 
 
-
-/* Main Content for Contact Us */
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-}
-
-main {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-info {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-/* Contact Form Styling */
-.contact-form-div {
-    flex: 2;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form-row {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-input::placeholder, textarea::placeholder {
-    color: #666;
-}
-
-.send-button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.send-button:hover {
-    background-color: #555;
-}
-
 .about-text-div {
     margin: 100px;
     padding: 100px;
@@ -806,89 +699,90 @@ main {
     box-shadow: 0 0 0 2px gold; /* Gold border effect using box-shadow */
 }
 
-/* Contact form */
-/* Styling for the contact form container */
-.contact-form-div {
-    max-width: 600px;
-    margin: 0 auto; /* Centering the form */
+.info-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the form elements */
+.info-container h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.contact-info, .contact-form-div {
+    width: 48%;
+}
+
+.contact-info p {
+    margin: 10px;
+    font-size: 20px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between form elements */
+    background-color: #c2c2c2;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .contact-form-row {
     display: flex;
-    gap: 10px; /* Space between input fields */
+    gap: 20px;
 }
 
-.contact-input,
-textarea {
+.contact-input {
     width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-input:focus,
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-radius: 4px;
 }
 
 textarea {
+    width: 100%; /* This ensures the textarea matches the form's width */
+    resize: none; /* This disables resizing */
     min-height: 100px;
-    resize: vertical; /* Allows vertical resizing */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Styling for the send button */
+
 .send-button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px;
+    background-color: gold;
+    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 70%; /* This makes the button take the full width of its container */
 }
 
 .send-button:hover {
-    background-color: #0056b3;
+    background-color: transparent;
+    color: gold;
+    box-shadow: 0 0 0 3px gold; /* This creates a box shadow that looks like a border */
 }
 
-.send-button:active {
-    background-color: #004494;
+/*contact us map */
+.map-container {
+    max-width: 600px; /* Set a max width for the container if desired */
+    margin: 0 auto;  /* Center the map */
+    margin-bottom: 30px;
 }
 
-/* Styling for contact info */
-.contact-info {
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.contact-info span {
-    font-size: 18px;
-    margin-right: 5px;
+iframe {
+    width: 100%; /* Make iframe responsive */
+    border: none; /* Remove border */
 }
 
 
