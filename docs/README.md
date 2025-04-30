@@ -1,6 +1,16 @@
+
+
 # Web Scraper
 
 **Overview**
+<hr>
+<img border-radius:5px width="750" alt="Screenshot 2025-04-30 at 1 06 52 PM" src="https://github.com/user-attachments/assets/5e771045-d720-41c8-bd30-b197a68604bd" />
+<hr>
+
+<img width="750" alt="Screenshot 2025-04-30 at 1 09 19 PM" src="https://github.com/user-attachments/assets/46143873-4fc1-4682-baff-1175117a1c28" />
+
+
+
 
 This web scraper is designed to automate the process of extracting specific data from the Campus Community Connection (CCC) platform. By automating this task, we can efficiently collect and analyze valuable information without manual intervention.
 
